@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+       
+        <title>Homework 2</title>
+        <meta name="description" content="Home">
+        <meta charset="utf-8">
+       
+        <!-- Site created by Phil Burkart on August 22, 2022 -->
+        
+        
+</head>
+
+    <body style="background-color:rgb(235, 235, 235);">
+        <header>Philip Burkart CNIT 133 Homework</header>
+        
+        <ul>
+            <a href="https://ionagael.github.io/CNIT133/index.html">Assignments Home</a>  
+        </ul>
+      
+        <ul>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework2.html">Homework #2</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework3.html">Homework #3</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework4.html">Homework #4</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework5.html">Homework #5</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework6.html">Homework #6</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework7.html">Homework #7</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework8.html">Homework #8</a></li>
+        </ul>
+        <footer>
+        </footer>
+    </body>
+</html>
