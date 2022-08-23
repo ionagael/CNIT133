@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+       
+        <!-- Site created by Phil Burkart on August 22, 2022 -->
+        
+</head>
+
+    <body style="background-color:rgb(235, 235, 235);">
+        <header>Philip Burkart CNIT 133 Assignments</header>
+        
+        <ul>
+            <li><a href="https://ionagael.github.io/CNIT133/Assignments">Assignments</a></li>  
+        </ul>
+      
+        <ul>
+            <li>Homework #2</li>
+            <li>Homework #3</li>
+            <li>Homework #4</li>
+            <li>Homework #5</li>
+            <li>Homework #7</li>
+            <li>Homework #8</li>
+        </ul>
+        <footer>
+        </footer>
+    </body>
+</html>
