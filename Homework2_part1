@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       
+        <title>CNIT 133 Homework 2 - Basic Operations</title>
+        <meta name="description" content="Home">
+        <meta charset="utf-8">
+        
+</head>
+
+    <body style="background-color:rgb(235, 235, 235);">
+        <header>CNIT 133 Homework 2, part 1</header>
+      
+        <ul>
+            <li><a href="https://ionagael.github.io/CNIT133/index.html">Assignments Home</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework3.html">Homework #2</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework3.html">Homework #3</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework4.html">Homework #4</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework5.html">Homework #5</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework6.html">Homework #6</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework7.html">Homework #7</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework8.html">Homework #8</a></li>
+        </ul>
+        
+<h2>Homework 2, parts 1-3</h2>
+        
+        <ul>
+            <li>Homework #2, part 1</li>
+            <li>Web page displayed in pairs and strong (bold), the letters ab and the numbers 12 and 34 on the same line, with each pair of characters separated by one space.</li>
+            <br>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework2_part2.html">Homework #2, part 2</a></li>
+            <li>Webpage containing a script that inputs three integers via form text boxes and displays the sum, average, and product of the three integers, and the smallest and largest of the three integers.</li>
+            <br>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework2_part3.html">Homework #2, part 3</a></li>
+            <li>Web page containing a script that inputs 5 numbers and determines and displays the count of the negative numbers, the number of positive numbers, and the number of zeros.</li>
+        </ul>
+
+<h3>Part 1:</h3>
+
+<script>
+document.write("<strong><span style="font-family: 'times new roman', times, serif; color: #ff0000;">ab</span> <span style="font-family: arial, helvetica, sans-serif; color: #3366ff;">12</span> <span style="color: #008000; font-family: impact;"><em>34</em></span></strong>");
+</script>
+        
+        <footer>
+        </footer>
+    </body>
+</html>
