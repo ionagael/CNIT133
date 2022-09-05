@@ -23,19 +23,8 @@ $(document).ready(function(){
        function process()
 {
        
-       if (number1 == "" || number2 == "" || number3 == "")
- 
- {
-    alert('Please enter numbers.');
-    return;
- }
 
-if (isNaN(number1) || isNaN(number2) || isNaN(number3))
 
-{
-    alert('Please enter numbers.');
-    return;
- }
        
 var number1, number2, number3, n1, n2, n3, result;
 number1 = document.getElementById("num1").value;
@@ -128,8 +117,8 @@ Third Number: <input type="text" id="num3" size="10"><br><br>
                      
 <br><br>             
 
-Sum: <textarea rows="1" cols="40" id="result"></textarea><br><br>
-Product: <textarea rows="1" cols="40" id="answer"></textarea><br><br>
+Sum: <textarea rows="1" cols="40" id="sum"></textarea><br><br>
+Product: <textarea rows="1" cols="40" id="product"></textarea><br><br>
 Average: <textarea rows="1" cols="40" id="average"></textarea><br><br>
 Smallest: <textarea rows="1" cols="40" id="smallest"></textarea><br><br> 
 Largest: <textarea rows="1" cols="40" id="largest"></textarea><br><br> 
