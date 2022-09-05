@@ -22,9 +22,33 @@ $(document).ready(function(){
        
        function process()
 {
-       
 
+var number1, number2, number3, n1, n2, n3, result;
+number1 = document.getElementById("num1").value;
+number2 = document.getElementById("num2").value;
+number3 = document.getElementById("num3").value;
+n1 = parseInt(number1);
+n2 = parseInt(number2);
+n3 = parseInt(number3);
+if (isNaN(number1) || isNaN(number2) || isNaN(number3))
+{
+     alert('Please enter numbers.');
+     return;
+ }
 
+var number1, number2, number3, n1, n2, n3, result;
+number1 = document.getElementById("num1").value;
+number2 = document.getElementById("num2").value;
+number3 = document.getElementById("num3").value;
+n1 = parseInt(number1);
+n2 = parseInt(number2);
+n3 = parseInt(number3);
+       if (number1 == "" || number2 == "" || number3 == "")
+ 
+ {
+    alert('Please enter numbers.');
+    return;
+ }
        
 var number1, number2, number3, n1, n2, n3, result;
 number1 = document.getElementById("num1").value;
