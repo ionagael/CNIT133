@@ -1,39 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
        
-        <title>CNIT 133 Homework 2 - Basic Operations</title>
-        <meta name="description" content="Home">
-        <meta charset="utf-8">
-        
-</head>
+       <head>
+       
+              <title>CNIT 133 Homework 2 - Basic Operations</title>
+       <meta name="description" content="Home">
+       <meta charset="utf-8">
+              
+              <style>
+                     body {background-color: #f5f5dc;}
+              </style>
+              
+<script>
 
-    <body style="background-color:rgb(235, 235, 235);">
-        <h1>CNIT 133 Homework #2 Basic Operations</h1>
-      
-        <ul>
-            <li><a href="https://ionagael.github.io/CNIT133/index.html">Homework Home</a></li>
-            <li><a href="https://ionagael.github.io/CNIT133/Homework2.html">Homework #2</a></li>
-            <li><a href="https://ionagael.github.io/CNIT133/Homework3.html">Homework #3</a></li>
-            <li><a href="https://ionagael.github.io/CNIT133/Homework4.html">Homework #4</a></li>
-            <li><a href="https://ionagael.github.io/CNIT133/Homework5.html">Homework #5</a></li>
-            <li><a href="https://ionagael.github.io/CNIT133/Homework6.html">Homework #6</a></li>
-            <li><a href="https://ionagael.github.io/CNIT133/Homework7.html">Homework #7</a></li>
-            <li><a href="https://ionagael.github.io/CNIT133/Homework8.html">Homework #8</a></li>
-        </ul>
-        
-<h2>Homework 2, part 2</h2>
-        
-        <ol>
-            <li><a href="https://ionagael.github.io/CNIT133/Homework2_part1.html">Homework #2, part 1:</a> Web page displayed in pairs and strong (bold), the letters ab and the numbers 12 and 34 on the same line, with each pair of characters separated by one space.</li>
-            <li>Homework #2, part 2: Web page containing a script that inputs three integers via form text boxes and displays the sum, average, and product of the three integers, and the smallest and largest of the three integers.</li>
-            <li><a href="https://ionagael.github.io/CNIT133/Homework2_part3.html">Homework #2, part 3:</a> Web page containing a script that inputs 5 numbers and determines and displays the count of the negative numbers, the number of positive numbers, and the number of zeros.</li>
-        </ol>
-
-           <h3>Part 2:</h3>
-        
-        <footer>
-        </footer>
-    </body>
+function process()
+{
+var number1, number2, number3, n1, n2, n3, product;
+number1 = document.forms["myform"].elements["num1"].value;
+number2 = document.forms["myform"].elements["num2"].value;
+number3 = document.forms["myform"].elements["num3"].value;
+n1 = parseInt(number1);
+n2 = parseInt(number2);
+n3 = parseInt(number3);
+product = n1 * n2 * n3;
+document.forms["myform"].elements["result"].value = product;
+}
+</script>
+       
+       </head>
+       
+       <body>
+              
+              <h1>CNIT 133 Homework #2 Basic Operations</h1>
+              <ul>
+                     <li><a href="https://ionagael.github.io/CNIT133/index.html">Homework Home</a></li>
+                     <li><a href="https://ionagael.github.io/CNIT133/Homework2.html">Homework #2</a></li>
+                     <li><a href="https://ionagael.github.io/CNIT133/Homework3.html">Homework #3</a></li>
+                     <li><a href="https://ionagael.github.io/CNIT133/Homework4.html">Homework #4</a></li>
+                     <li><a href="https://ionagael.github.io/CNIT133/Homework5.html">Homework #5</a></li>
+                     <li><a href="https://ionagael.github.io/CNIT133/Homework6.html">Homework #6</a></li>
+                     <li><a href="https://ionagael.github.io/CNIT133/Homework7.html">Homework #7</a></li>
+                     <li><a href="https://ionagael.github.io/CNIT133/Homework8.html">Homework #8</a></li>
+              </ul>
+              
+              <h2>Homework 2, part 2</h2>
+              <ol>
+                     <li><a href="https://ionagael.github.io/CNIT133/Homework2_part1.html">Homework #2, part 1:</a> Web page displayed in pairs and strong (bold), the letters ab and the numbers 12 and 34 on the same line, with each pair of characters separated by one space.</li>
+                     <li>Homework #2, part 2: Web page containing a script that inputs three integers via form text boxes and displays the sum, average, and product of the three integers, and the smallest and largest of the three integers.</li>
+                     <li><a href="https://ionagael.github.io/CNIT133/Homework2_part3.html">Homework #2, part 3:</a> Web page containing a script that inputs 5 numbers and determines and displays the count of the negative numbers, the number of positive numbers, and the number of zeros.</li>
+              </ol>
+              
+              <h3>Part 2: Product</h3>
+              <form name="myform">
+                     First Number: <input type="text" name="num1" size="10"><br><br>
+                     Second Number: <input type="text" name="num2" size="10"><br><br>
+                     Third Number: <input type="text" name="num3" size="10"><br><br>
+                     Product is: <input type="text" name="result" size="10"><br><br>
+                     <input type="button" onclick="process()" value="SUBMIT">
+                     <input type="reset" value="RESET">
+              </form>
+       </body>
 </html>
