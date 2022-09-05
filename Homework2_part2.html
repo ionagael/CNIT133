@@ -32,6 +32,20 @@ n3 = parseInt(number3);
 result = n1 + n2 + n3;
 document.getElementById("result").value = (+ result);
 
+if (number1 == "" || number2 == "" || number3 == "")
+ 
+ {
+    alert('Please enter numbers.');
+    return;
+ }
+
+if (isNaN(number1) || isNaN(number2) || isNaN(number3))
+
+{
+    alert('Please enter numbers.');
+    return;
+ }
+ 
 var number1, number2, number3, n1, n2, n3, product;
 number1 = document.forms["myform"].elements["num1"].value;
 number2 = document.forms["myform"].elements["num2"].value;
