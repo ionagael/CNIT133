@@ -99,7 +99,7 @@ document.getElementById("largest").value = (+ result);
               </ol>
               
 
-              <h3>Part 2: Results derived from math equations based on 3 numbers:</h3>
+              <h3>Part 2: Results derived from math equations based on 3 random numbers:</h3>
              
              <div id="div1">
               <form name="myform">
@@ -109,6 +109,10 @@ Second Number: <input type="text" id="num2" size="10"><br><br>
 Third Number: <input type="text" id="num3" size="10"><br><br>
 
 <br><br>
+                     <input type="button" onclick="process()" value="SUBMIT">
+                     <input type="reset" value="RESET">
+                     
+<br><br>             
 
 Sum: <textarea rows="1" cols="40" id="result"></textarea><br><br>
 Product: <textarea rows="1" cols="40" id="answer"></textarea><br><br>
@@ -117,8 +121,6 @@ Smallest: <textarea rows="1" cols="40" id="smallest"></textarea><br><br>
 Largest: <textarea rows="1" cols="40" id="largest"></textarea><br><br> 
 
 <br>
-<input type="button" onclick="process()" value="SUBMIT">
-<input type="reset" value="RESET">
 </form>
 </div>
 <br>
