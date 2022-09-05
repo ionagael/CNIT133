@@ -43,6 +43,26 @@ n2 = parseInt(number2);
 n3 = parseInt(number3);
 result = (n1 + n2 + n3)/3;
 document.getElementById("average").value = (+ result);
+
+var number1, number2, number3, n1, n2, n3, result;
+number1 = document.getElementById("num1").value;
+number2 = document.getElementById("num2").value;
+number3 = document.getElementById("num3").value;
+n1 = parseInt(number1);
+n2 = parseInt(number2);
+n3 = parseInt(number3);
+result = Math.min(n1,n2,n3);
+document.getElementById("smallest").value = (+ result);
+
+var number1, number2, number3, n1, n2, n3, result;
+number1 = document.getElementById("num1").value;
+number2 = document.getElementById("num2").value;
+number3 = document.getElementById("num3").value;
+n1 = parseInt(number1);
+n2 = parseInt(number2);
+n3 = parseInt(number3);
+result = Math.max(n1,n2,n3);
+document.getElementById("largest").value = (+ result);
 }
        
 </script>
@@ -71,18 +91,24 @@ document.getElementById("average").value = (+ result);
               </ol>
               
 
-              <h3>Part 2: Sum, product, and average</h3>
+              <h3>Part 2: Results derived from math equations based on 3 numbers:</h3>
               <form name="myform">
               
 First Number: <input type="text" id="num1" size="10"><br><br>
 Second Number: <input type="text" id="num2" size="10"><br><br>
 Third Number: <input type="text" id="num3" size="10"><br><br>
+
 <br><br>
+
 Sum: <textarea rows="1" cols="40" id="result"></textarea><br><br>
-
 Product: <textarea rows="1" cols="40" id="answer"></textarea><br><br>
-
 Average: <textarea rows="1" cols="40" id="average"></textarea><br><br>
+Smallest: <textarea rows="1" cols="40" id="smallest"></textarea><br><br> 
+Smallest: <textarea rows="1" cols="40" id="largest"></textarea><br><br> 
+
+
+
+<br><br>
 
 <input type="button" onclick="process()" value="SUBMIT">
 <input type="reset" value="RESET">
