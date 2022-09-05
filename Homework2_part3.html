@@ -15,34 +15,39 @@
        function process()
 {
 
-var number1, number2, number3, number4, number5, n1, n2, n3, n4, n5, result;
-number1 = document.getElementById("num1").value;
+var number1, number2, number3, number4, number5, totalNumberZero = 0;
+number1 = document.forms["myform"].elements["num1"].value;
 number2 = document.getElementById("num2").value;
-number3 = document.getElementById("num3").value;
+number3 = document.forms["myform"].elements["num3"].value;
 number4 = document.getElementById("num4").value;
-number5 = document.getElementById("num5").value;
+number5 = document.forms["myform"].elements["num5"].value;
+
 n1 = parseInt(number1);
 n2 = parseInt(number2);
 n3 = parseInt(number3);
 n4 = parseInt(number4);
 n5 = parseInt(number5);
+
+
 if (isNaN(number1) || isNaN(number2) || isNaN(number3) || isNaN(number4) || isNaN(number5))
 {
      alert('Please enter numbers.');
      return;
  }
 
-var number1, number2, number3, number4, number5, n1, n2, n3, n4, n5, result;
-number1 = document.getElementById("num1").value;
+var number1, number2, number3, number4, number5, totalNumberZero = 0;
+number1 = document.forms["myform"].elements["num1"].value;
 number2 = document.getElementById("num2").value;
-number3 = document.getElementById("num3").value;
+number3 = document.forms["myform"].elements["num3"].value;
 number4 = document.getElementById("num4").value;
-number5 = document.getElementById("num5").value;
+number5 = document.forms["myform"].elements["num5"].value;
+
 n1 = parseInt(number1);
 n2 = parseInt(number2);
 n3 = parseInt(number3);
 n4 = parseInt(number4);
 n5 = parseInt(number5);
+
        if (number1 == "" || number2 == "" || number3 == "" || number4 == "" || number5 == "")
  
  {
@@ -50,19 +55,45 @@ n5 = parseInt(number5);
     return;
  }
        
-var number1, number2, number3, number4, number5, n1, n2, n3, n4, n5, result;
-number1 = document.getElementById("num1").value;
+var number1, number2, number3, number4, number5, totalNumberZero = 0;
+number1 = document.forms["myform"].elements["num1"].value;
 number2 = document.getElementById("num2").value;
-number3 = document.getElementById("num3").value;
+number3 = document.forms["myform"].elements["num3"].value;
 number4 = document.getElementById("num4").value;
-number5 = document.getElementById("num5").value;
+number5 = document.forms["myform"].elements["num5"].value;
+
 n1 = parseInt(number1);
 n2 = parseInt(number2);
 n3 = parseInt(number3);
 n4 = parseInt(number4);
 n5 = parseInt(number5);
-result = n1 + n2 + n3 + n4 + n5;
-document.getElementById("zero").value = (+ result);
+
+if ( n1 == 0 )
+totalNumberZero = totalNumberZero + 1;
+if ( n1 !== 0 )
+totalNumberZero = totalNumberZero + 0;
+
+if ( n2 == 0 )
+totalNumberZero = totalNumberZero + 1;
+if ( n2 !== 0 )
+totalNumberZero = totalNumberZero + 0;
+
+if ( n3 == 0 )
+totalNumberZero = totalNumberZero + 1;
+if ( n3 !== 0 )
+totalNumberZero = totalNumberZero + 0;
+
+if ( n4 == 0 )
+totalNumberZero = totalNumberZero + 1;
+if ( n4 !== 0 )
+totalNumberZero = totalNumberZero + 0;
+
+if ( n5 == 0 )
+totalNumberZero = totalNumberZero + 1;
+if ( n5 !== 0 )
+totalNumberZero = totalNumberZero + 0;
+
+document.getElementById("results").innerHTML = (+ totalNumberZero);
  
 
 }
@@ -85,15 +116,15 @@ document.getElementById("zero").value = (+ result);
                      <li><a href="https://ionagael.github.io/CNIT133/Homework8.html">Homework #8</a></li>
               </ul>
               
-              <h2>Homework 2, part 2</h2>
+              <h2>Homework 2, part 3</h2>
               <ol>
                      <li><a href="https://ionagael.github.io/CNIT133/Homework2_part1.html">Homework #2, part 1:</a> Web page displayed in pairs and strong (bold), the letters ab and the numbers 12 and 34 on the same line, with each pair of characters separated by one space.</li>
-                     <li>Homework #2, part 2: Web page containing a script that inputs three integers via form text boxes and displays the sum, average, and product of the three integers, and the smallest and largest of the three integers.</li>
-                     <li><a href="https://ionagael.github.io/CNIT133/Homework2_part3.html">Homework #2, part 3:</a> Web page containing a script that inputs 5 numbers and determines and displays the count of the negative numbers, the number of positive numbers, and the number of zeros.</li>
+                     <li><a href="https://ionagael.github.io/CNIT133/Homework2_part2.html">Homework #2, part 2: </a>Web page containing a script that inputs three integers via form text boxes and displays the sum, average, and product of the three integers, and the smallest and largest of the three integers.</li>
+                     <li>Homework #2, part 3: Web page containing a script that inputs 5 numbers and determines and displays the count of the negative numbers, the number of positive numbers, and the number of zeros.</li>
               </ol>
               
 
-              <h3>Enter 3 random numbers to see results to math equations below:</h3>
+              <h3>Enter 5 random numbers to generate answers to the questions below:</h3>
              
  
               <form name="myform">
@@ -109,7 +140,7 @@ Fifth Number: <input type="text" id="num5" size="10"><br><br>
                      
 <br><br>             
 
-Zeros: <textarea rows="1" cols="40" id="zero"></textarea><br><br>
+How many zeros did you input: <textarea rows="1" cols="40" id="results"></textarea><br><br>
 </form>
 
 
