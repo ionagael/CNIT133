@@ -22,17 +22,8 @@ $(document).ready(function(){
        
        function process()
 {
-var number1, number2, number3, n1, n2, n3, result;
-number1 = document.getElementById("num1").value;
-number2 = document.getElementById("num2").value;
-number3 = document.getElementById("num3").value;
-n1 = parseInt(number1);
-n2 = parseInt(number2);
-n3 = parseInt(number3);
-result = n1 + n2 + n3;
-document.getElementById("result").value = (+ result);
-
-if (number1 == "" || number2 == "" || number3 == "")
+       
+       if (number1 == "" || number2 == "" || number3 == "")
  
  {
     alert('Please enter numbers.');
@@ -45,16 +36,26 @@ if (isNaN(number1) || isNaN(number2) || isNaN(number3))
     alert('Please enter numbers.');
     return;
  }
+       
+var number1, number2, number3, n1, n2, n3, result;
+number1 = document.getElementById("num1").value;
+number2 = document.getElementById("num2").value;
+number3 = document.getElementById("num3").value;
+n1 = parseInt(number1);
+n2 = parseInt(number2);
+n3 = parseInt(number3);
+result = n1 + n2 + n3;
+document.getElementById("sum").value = (+ result);
  
-var number1, number2, number3, n1, n2, n3, product;
+var number1, number2, number3, n1, n2, n3, result;
 number1 = document.forms["myform"].elements["num1"].value;
 number2 = document.forms["myform"].elements["num2"].value;
 number3 = document.forms["myform"].elements["num3"].value;
 n1 = parseInt(number1);
 n2 = parseInt(number2);
 n3 = parseInt(number3);
-product = n1 * n2 * n3;
-document.forms["myform"].elements["answer"].value = product;
+result = n1 * n2 * n3;
+document.forms["myform"].elements["product"].value = result;
 
 var number1, number2, number3, n1, n2, n3, result;
 number1 = document.getElementById("num1").value;
