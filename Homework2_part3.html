@@ -95,7 +95,85 @@ totalNumberZero = totalNumberZero + 0;
 
 document.getElementById("results").innerHTML = (+ totalNumberZero);
  
+var number1, number2, number3, number4, number5, totalNegativeNumber = 0;
+number1 = document.forms["myform"].elements["num1"].value;
+number2 = document.getElementById("num2").value;
+number3 = document.forms["myform"].elements["num3"].value;
+number4 = document.getElementById("num4").value;
+number5 = document.forms["myform"].elements["num5"].value;
 
+n1 = parseInt(number1);
+n2 = parseInt(number2);
+n3 = parseInt(number3);
+n4 = parseInt(number4);
+n5 = parseInt(number5);
+
+if ( n1 < 0 )
+totalNegativeNumber = totalNegativeNumber + 1;
+if ( n1 >= 0 )
+totalNegativeNumber = totalNegativeNumber + 0;
+
+if ( n2 < 0 )
+totalNegativeNumber = totalNegativeNumber + 1;
+if ( n2 >= 0 )
+totalNegativeNumber = totalNegativeNumber + 0;
+
+if ( n3 < 0 )
+totalNegativeNumber = totalNegativeNumber + 1;
+if ( n3 >= 0 )
+totalNegativeNumber = totalNegativeNumber + 0;
+
+if ( n4 < 0 )
+totalNegativeNumber = totalNegativeNumber + 1;
+if ( n4 >= 0 )
+totalNegativeNumber = totalNegativeNumber + 0;
+
+if ( n5 < 0 )
+totalNegativeNumber = totalNegativeNumber + 1;
+if ( n5 >= 0 )
+totalNegativeNumber = totalNegativeNumber + 0;
+
+document.getElementById("answers").innerHTML = (+ totalNegativeNumber);
+
+var number1, number2, number3, number4, number5, totalPositiveNumber = 0;
+number1 = document.forms["myform"].elements["num1"].value;
+number2 = document.getElementById("num2").value;
+number3 = document.forms["myform"].elements["num3"].value;
+number4 = document.getElementById("num4").value;
+number5 = document.forms["myform"].elements["num5"].value;
+
+n1 = parseInt(number1);
+n2 = parseInt(number2);
+n3 = parseInt(number3);
+n4 = parseInt(number4);
+n5 = parseInt(number5);
+
+if ( n1 > 0 )
+totalPositiveNumber = totalPositiveNumber + 1;
+if ( n1 <= 0 )
+totalPositiveNumber = totalPositiveNumber + 0;
+
+if ( n2 > 0 )
+totalPositiveNumber = totalPositiveNumber + 1;
+if ( n2 <= 0 )
+totalPositiveNumber = totalPositiveNumber + 0;
+
+if ( n3 > 0 )
+totalPositiveNumber = totalPositiveNumber + 1;
+if ( n3 <= 0 )
+totalPositiveNumber = totalPositiveNumber + 0;
+
+if ( n4 > 0 )
+totalPositiveNumber = totalPositiveNumber + 1;
+if ( n4 <= 0 )
+totalPositiveNumber = totalPositiveNumber + 0;
+
+if ( n5 > 0 )
+totalPositiveNumber = totalPositiveNumber + 1;
+if ( n5 <= 0 )
+totalPositiveNumber = totalPositiveNumber + 0;
+
+document.getElementById("totals").innerHTML = (+ totalPositiveNumber);
 }
        
 </script>
@@ -140,7 +218,9 @@ Fifth Number: <input type="text" id="num5" size="10"><br><br>
                      
 <br><br>             
 
-How many zeros did you input: <textarea rows="1" cols="40" id="results"></textarea><br><br>
+How many zeros were input: <textarea rows="1" cols="40" id="results"></textarea><br><br>
+How many negative numbers were input: <textarea rows="1" cols="40" id="answers"></textarea><br><br>
+How many positive numbers were input: <textarea rows="1" cols="40" id="totals"></textarea><br><br>
 </form>
 
 
