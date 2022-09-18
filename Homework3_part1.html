@@ -50,6 +50,43 @@ participation2 = parseInt(participation);
      return;
  }
  
+     var hw, mid, final, participation, hw2, mid2, final2, participation2, result;
+
+hw = document.getElementById("hwentry").value;
+mid = document.getElementById("midentry").value;
+final = document.getElementById("finalentry").value;
+participation = document.getElementById("participationentry").value;
+
+hw2 = parseInt(hw);
+mid2 = parseInt(mid);
+final2 = parseInt(final);
+participation2 = parseInt(participation);
+
+       if (hw > 100 || mid > 100 || final > 100 || participation > 100)
+{
+     alert('Please enter value between 0 and 100.');
+     return;
+ }
+    
+         var hw, mid, final, participation, hw2, mid2, final2, participation2, result;
+
+hw = document.getElementById("hwentry").value;
+mid = document.getElementById("midentry").value;
+final = document.getElementById("finalentry").value;
+participation = document.getElementById("participationentry").value;
+
+hw2 = parseInt(hw);
+mid2 = parseInt(mid);
+final2 = parseInt(final);
+participation2 = parseInt(participation);
+
+       if (hw < 0 || mid < 0 || final < 0 || participation < 0)
+{
+     alert('Please enter value between 0 and 100.');
+     return;
+ }
+ 
+    
   var hw, mid, final, participation, hw2, mid2, final2, participation2, result;
 
 hw = document.getElementById("hwentry").value;
