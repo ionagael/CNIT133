@@ -8,7 +8,107 @@
         <meta charset="utf-8">
        
         <!-- Site created by Phil Burkart on August 22, 2022 -->
-        
+<script>
+
+       
+       function process()
+{
+
+var hw, hw2, result;
+
+hw = document.getElementById("hwentry").value;
+hw2 = parseInt(hw);
+
+
+if (isNaN(hw))
+{
+     alert('Please enter numbers.');
+     return;
+ }
+ 
+var hw, hw2, result;
+
+hw = document.getElementById("hwentry").value;
+hw2 = parseInt(hw);
+
+       if (hw == "")
+{
+     alert('Please enter numbers.');
+     return;
+ }
+ var hw, hw2, result;
+hw = document.getElementById("hwentry").value;
+hw2 = parseInt(hw);
+result =  5/9 * (hw - 32);
+document.getElementById("total").value = (+ result.toFixed(0));
+  
+
+}
+
+
+</script>
+
+<script>
+
+       
+       function process2()
+{
+
+var hw, hw2, result;
+
+hw = document.getElementById("hwentry").value;
+hw2 = parseInt(hw);
+
+
+if (isNaN(hw))
+{
+     alert('Please enter numbers.');
+     return;
+ }
+ 
+var hw, hw2, result;
+
+hw = document.getElementById("hwentry").value;
+hw2 = parseInt(hw);
+
+       if (hw == "")
+{
+     alert('Please enter numbers.');
+     return;
+ }
+ var hw, hw2, result;
+hw = document.getElementById("hwentry").value;
+hw2 = parseInt(hw);
+result =  (9/5 * hw) + 32 ;
+document.getElementById("total2").value = (+ result.toFixed(0));
+  
+
+}
+
+
+</script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+  <script>
+  
+  $( function() {
+    $( document ).tooltip();
+  } );
+  </script>
+  
+
+
         
 </head>
 
@@ -27,7 +127,22 @@
             <li><a href="https://ionagael.github.io/CNIT133/Homework8.html">Homework #8</a></li>
         </ul>
         
-    <h2>Homework 3, part 3</h2>
+    <h2>Homework 3, part 2 - Convert Farenheit to Celsius and vice versa</h2>
+    
+
+<form name="myform">           
+Input the temperature: <input type="text" id="hwentry" size="10" style="text-align:right"><br><br>
+<input type="button" onclick="process()" value="Farenheit to Celsius">
+<input type="reset" value="RESET">                 
+<br><br>             
+<textarea rows="1" cols="20" id="total"></textarea><br><br>
+          
+<form name="myform">           
+Input the temperature: <input type="text" id="hwentry" size="10" style="text-align:right"><br><br>
+<input type="button" onclick="process2()" value="Celsius to Farenheit">
+<input type="reset" value="RESET">                 
+<br><br>             
+<textarea rows="1" cols="20" id="total2"></textarea><br><br>
     
         <footer>
         </footer>
