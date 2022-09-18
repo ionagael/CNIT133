@@ -63,9 +63,21 @@ final2 = parseInt(final);
 participation2 = parseInt(participation);
 result = (.5 * hw2) + (.2 * mid2) + (.2 * final2) + (.1 * participation2);
 
-document.getElementById("average").value = (+ result);
+  if (result >= 90 && result <= 100)
+document.getElementById("average").value = ("A: " + result);
    
+else if  (result >= 80 && result < 90)    
+document.getElementById("average").value = ("B: " + result);
 
+
+else if  (result >= 70 && result < 80)    
+document.getElementById("average").value = ("C: " + result);
+
+else if  (result >= 60 && result < 70)    
+document.getElementById("average").value = ("D: " + result);
+
+else if  (result >= 00 && result < 60)    
+document.getElementById("average").value = ("F: " + result + ", Student must retake the course");
 }
 
 </script>
