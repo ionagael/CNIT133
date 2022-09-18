@@ -8,7 +8,68 @@
         <meta charset="utf-8">
        
         <!-- Site created by Phil Burkart on August 22, 2022 -->
-        
+<script>
+
+       
+       function process()
+{
+
+var hw, mid, final, participation, hw2, mid2, final2, participation2, result;
+
+hw = document.getElementById("hwentry").value;
+mid = document.getElementById("midentry").value;
+final = document.getElementById("finalentry").value;
+participation = document.getElementById("participationentry").value;
+
+hw2 = parseInt(hw);
+mid2 = parseInt(mid);
+final2 = parseInt(final);
+participation2 = parseInt(participation);
+
+if (isNaN(hw) || isNaN(mid) || isNaN(final) || isNaN(participation))
+{
+     alert('Please enter numbers.');
+     return;
+ }
+ 
+ var hw, mid, final, participation, hw2, mid2, final2, participation2, result;
+
+hw = document.getElementById("hwentry").value;
+mid = document.getElementById("midentry").value;
+final = document.getElementById("finalentry").value;
+participation = document.getElementById("participationentry").value;
+
+hw2 = parseInt(hw);
+mid2 = parseInt(mid);
+final2 = parseInt(final);
+participation2 = parseInt(participation);
+
+       if (hw == "" || mid == "" || final == "" || participation == "")
+{
+     alert('Please enter numbers.');
+     return;
+ }
+ 
+  var hw, mid, final, participation, hw2, mid2, final2, participation2, result;
+
+hw = document.getElementById("hwentry").value;
+mid = document.getElementById("midentry").value;
+final = document.getElementById("finalentry").value;
+participation = document.getElementById("participationentry").value;
+
+hw2 = parseInt(hw);
+mid2 = parseInt(mid);
+final2 = parseInt(final);
+participation2 = parseInt(participation);
+result = (.5 * hw2) + (.2 * mid2) + (.2 * final2) + (.1 * participation2);
+
+document.getElementById("average").value = (+ result);
+   
+
+}
+
+</script>
+
         
 </head>
 
@@ -27,7 +88,26 @@
             <li><a href="https://ionagael.github.io/CNIT133/Homework8.html">Homework #8</a></li>
         </ul>
         
-    <h2>Homework 3, part 1</h2>
+    <h2>Homework 3, part 1 - Student Grades: Determine your score</h2>
+    
+
+              <form name="myform">
+              
+Homework: <input type="text" id="hwentry" size="10"><br><br>
+Midterm: <input type="text" id="midentry" size="10"><br><br>
+Final: <input type="text" id="finalentry" size="10"><br><br>
+Participation: <input type="text" id="participationentry" size="10"><br><br>
+
+                     <input type="button" onclick="process()" value="SUBMIT">
+                     <input type="reset" value="RESET">
+                     
+<br><br>             
+
+Average: <textarea rows="1" cols="40" id="average"></textarea><br><br>
+
+
+</form>
+
     
         <footer>
         </footer>
