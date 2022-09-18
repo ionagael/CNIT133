@@ -88,7 +88,7 @@ document.getElementById("total").value = (+ result.toFixed(2));
   
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  
+
   <script>
   
   $( function() {
@@ -106,6 +106,13 @@ document.getElementById("total").value = (+ result.toFixed(2));
       color:black;
       }
       
+      textarea{
+    text-align:right;
+ }
+ 
+
+      
+
 
 
   </style>
@@ -135,10 +142,12 @@ document.getElementById("total").value = (+ result.toFixed(2));
 
 <p class="noblue">Input the number of items sold for each item number:</p>
               
-Item 1: <input type="text" id="hwentry" size="10"><br><br>
-Item 2: <input type="text" id="midentry" size="10"><br><br>
-Item 3: <input type="text" id="finalentry" size="10"><br><br>
-Item 4: <input type="text" id="participationentry" size="10"><br><br>
+            
+              
+Item 1: <input type="text" id="hwentry" size="10" style="text-align:right"><br><br>
+Item 2: <input type="text" id="midentry" size="10" style="text-align:right"><br><br>
+Item 3: <input type="text" id="finalentry" size="10" style="text-align:right"><br><br>
+Item 4: <input type="text" id="participationentry" size="10" style="text-align:right"><br><br>
 
                      <input type="button" onclick="process()" value="SUBMIT">
                      <input type="reset" value="RESET">
@@ -150,6 +159,8 @@ Total Sold in USD:  <textarea rows="1" cols="40" id="average"></textarea>
 <br><br>
 
 Total Weekly Earnings in USD: <textarea rows="1" cols="40" id="total"></textarea><br><br>
+
+
 
 </form>
 
