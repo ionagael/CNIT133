@@ -34,7 +34,7 @@ var num = document.forms["numberG"].elements["numguess"].value;
 
 if (isNaN(num) )
               {
-   document.getElementById("result").innerHTML = ("<p style='color:red; font-size:18px;'>I said to choose a number between 1 and 5</p>");
+   document.getElementById("result").innerHTML = ("<p style='color:red; font-size:18px;'>Please enter a number.</p>");
 
                } 
 else {
@@ -89,11 +89,11 @@ document.getElementById("result").innerHTML = "";
 <button type="button" onclick="myFunction2()">Random Number 2</button>
 <p id="demo2"></p>
 
-<!-- guess a random number -->
+
 
 <form name="numberG">
 
-<p>Enter your answer:</p> 
+<p>Enter the product of the above two numbers:</p> 
 
 <input name="numguess" type="text" size="3">
 <br><br>
