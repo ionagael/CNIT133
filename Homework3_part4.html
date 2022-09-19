@@ -9,6 +9,58 @@
        
         <!-- Site created by Phil Burkart on August 22, 2022 -->
         
+<script>
+
+let x = Math.floor((Math.random() * 10));
+
+
+let y = Math.floor((Math.random() * 10));
+
+
+
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = x;
+}
+
+function myFunction2() {
+  document.getElementById("demo2").innerHTML = y;
+}
+
+
+function startGuess()  {
+
+var num = document.forms["numberG"].elements["numguess"].value;
+
+if (isNaN(num) )
+              {
+   document.getElementById("result").innerHTML = ("<p style='color:red; font-size:18px;'>I said to choose a number between 1 and 5</p>");
+
+               } 
+else {
+     guess(); 
+     }
+
+}
+
+function guess()
+{
+var num = document.forms["numberG"].elements["numguess"].value;
+
+var  rightAns = x*y;
+
+  if (rightAns == num) 
+    document.getElementById("result").innerHTML = (num + " is correct. Very Good. Click 'Refresh Question' if you would like to go again");
+  else
+    document.getElementById("result").innerHTML = ("<br>" + num + " is incorrect! " + 
+    "<span style='color:blue; font-size:17px;'>The correct answer is</span> " + rightAns + ".");
+}
+
+function res()  
+{
+document.getElementById("result").innerHTML = "";
+}
+</script>
         
 </head>
 
@@ -28,6 +80,18 @@
         </ul>
         
     <h2>Homework 3, part 4</h2>
+    
+
+
+<h2>Random Number Generator</h2>
+
+<button type="button" onclick="myFunction()">Random Number 1</button>
+<p id="demo"></p>
+
+<button type="button" onclick="myFunction2()">Random Number 2</button>
+<p id="demo2"></p>
+
+
     
         <footer>
         </footer>
