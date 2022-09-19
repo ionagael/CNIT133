@@ -50,10 +50,9 @@ var num = document.forms["numberG"].elements["numguess"].value;
 var  rightAns = x*y;
 
   if (rightAns == num) 
-    document.getElementById("result").innerHTML = (num + " is correct. Very Good. Click 'Refresh Question' if you would like to go again");
+    document.getElementById("result").innerHTML = ("<p>Very Good! Click 'Refresh Question' if you would like to answer another question.</p>");
   else
-    document.getElementById("result").innerHTML = ("<br>" + num + " is incorrect! " + 
-    "<span style='color:blue; font-size:17px;'>The correct answer is</span> " + rightAns + ".");
+    document.getElementById("result").innerHTML = ("<p>Incorrect. Click 'Erase' and try again.</p>");
 }
 
 function res()  
@@ -81,6 +80,7 @@ document.getElementById("result").innerHTML = "";
         
     <h2>Homework 3, part 4: Learn Multiplication</h2>
     
+<section class="body">
 <p>Generate two random numbers:</p>
 
 <button type="button" onclick="myFunction()">Random Number 1</button>
@@ -88,6 +88,27 @@ document.getElementById("result").innerHTML = "";
 
 <button type="button" onclick="myFunction2()">Random Number 2</button>
 <p id="demo2"></p>
+
+<!-- guess a random number -->
+
+<form name="numberG">
+
+<p>Enter your answer:</p> 
+
+<input name="numguess" type="text" size="3">
+<br><br>
+ 
+<input  type="button" value="Check Your Answer" onclick="startGuess();">
+
+<input  type="reset" value="Erase" onclick="res();">
+<button onClick="window.location.reload();">Refresh Question</button>
+
+</form>
+
+
+<div id="result"></div>
+
+</section>
 
 
     
