@@ -32,6 +32,10 @@ if (isNaN(hw) || isNaN(mid) || isNaN(final) || isNaN(participation))
      return;
  }
  
+    
+    
+    
+    
  var hw, mid, final, participation, hw2, mid2, final2, participation2, result;
 
 hw = document.getElementById("hwentry").value;
@@ -49,6 +53,9 @@ participation2 = parseInt(participation);
      alert('Please enter numbers.');
      return;
  }
+    
+    
+    
  
   var hw, mid, final, participation, hw2, mid2, final2, participation2, result;
 
@@ -64,6 +71,9 @@ participation2 = parseInt(participation);
 result = (239.99 * hw2) + (129.75 * mid2) + (99.95 * final2) + (350.89 * participation2);
 
 document.getElementById("average").value = (+ result.toFixed(2));
+    
+    
+    
 
   var hw, mid, final, participation, hw2, mid2, final2, participation2, result;
 
@@ -77,10 +87,15 @@ mid2 = parseInt(mid);
 final2 = parseInt(final);
 participation2 = parseInt(participation);
 result = ((239.99 * hw2) + (129.75 * mid2) + (99.95 * final2) + (350.89 * participation2))*.09+200;
+    
+
 
 document.getElementById("total").value = (+ result.toFixed(2));
 
 }
+    
+    
+    
 </script>
   
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
@@ -158,7 +173,7 @@ Total Sold in USD:  <textarea rows="1" cols="40" id="average"></textarea>
 
 <br><br>
 
-Total Weekly Earnings in USD: <textarea rows="1" cols="40" id="total"></textarea><br><br>
+Total Extra Weekly Earnings if over $5,000 in Total Sold: <textarea rows="1" cols="40" id="total"></textarea><br><br>
 
 
 
