@@ -86,15 +86,27 @@ hw2 = parseInt(hw);
 mid2 = parseInt(mid);
 final2 = parseInt(final);
 participation2 = parseInt(participation);
-result = ((239.99 * hw2) + (129.75 * mid2) + (99.95 * final2) + (350.89 * participation2))*.09+200;
+result = ((239.99 * hw2) + (129.75 * mid2) + (99.95 * final2) + (350.89 * participation2));
+result2 = (((239.99 * hw2) + (129.75 * mid2) + (99.95 * final2) + (350.89 * participation2))*.09+200)+((239.99 * hw2) + (129.75 * mid2) + (99.95 * final2) + (350.89 * participation2));
+
+       if (result >= 5000)
+{
+document.getElementById("total").value = (+ result2.toFixed(2));
+ }
+    
+
+       else
+{
+document.getElementById("total").value = (+ result.toFixed(2));
+ }
     
 
 
-document.getElementById("total").value = (+ result.toFixed(2));
+
+
+
 
 }
-    
-    
     
 </script>
   
@@ -173,7 +185,7 @@ Total Sold in USD:  <textarea rows="1" cols="40" id="average"></textarea>
 
 <br><br>
 
-Total Extra Weekly Earnings if over $5,000 in Total Sold: <textarea rows="1" cols="40" id="total"></textarea><br><br>
+Total Weekly Earnings in USD: <textarea rows="1" cols="40" id="total"></textarea><br><br>
 
 
 
