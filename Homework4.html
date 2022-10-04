@@ -33,12 +33,50 @@
   display: table;
   clear: both;
             
+    
+    .container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.bottom {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.container:hover .bottom {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+    
         </style>
         
 </head>
 
 <body>
-        <h1>Coming Soon!</h1>
+        <h1>CNIT 133 Homework 4 - Looping Statements</h1>
       
         <ul>
             <li><a href="https://ionagael.github.io/CNIT133/index.html">Homework Home</a></li>
@@ -51,17 +89,26 @@
             <li><a href="https://ionagael.github.io/CNIT133/Homework8.html">Homework #8</a></li>
         </ul>
     
-    <div class="row"> 
-  
-  <div class="column">
-  <img src="images/almond.png" style="width:50%">
-  </div>
-  
-  <div class="column">
-  <img src="images/caramel.png" style="width:50%">
-  </div>  
+<div class="row"> 
 
-
+<div class="column">
+<div class="container">
+<img src="images/almond.png" style="width:50%">
+<div class="bottom">
+<a href="https://ionagael.github.io/CNIT133/Homework4_part1.html"><div class="text">Part 1</div></a>
+</div>
+</div>        
+</div>
+  
+<div class="column">
+<div class="container">    
+<img src="images/caramel.png" style="width:50%">
+<div class="bottom">
+<a href="https://ionagael.github.io/CNIT133/Homework4_part2.html"><div class="text">Part 2</div></a>
+</div>
+</div>   
+</div>  
+    
 </div>
         <footer>
         </footer>
