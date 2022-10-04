@@ -7,14 +7,51 @@
         <title>Homework 3</title>
         <meta name="description" content="Home">
         <meta charset="utf-8">
-       
+        <title>jQuery UI Draggable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #draggable { width: 150px; height: 150px; padding: 0.5em; border-color: transparent; background-color:transparent;}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+  } );
+  </script>
         <!-- Site created by Phil Burkart on August 22, 2022 -->
 <script>
 
 
 </script>
+<style>
+              .parent {
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+      .image1 {
+        position: relative;
+        top: 0;
+        left: 0;
 
-        
+    
+      }
+      .image2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+   
+             
+ z-index: 5;
+      }
+      img.cookiez{
+       z-index: 9999;
+      
+      }
+      
+</style>
 </head>
 
 
@@ -32,9 +69,9 @@
             <li><a href="https://ionagael.github.io/CNIT133/Homework8.html">Homework #8</a></li>
         </ul>
         
-    <h2>Homework 4, part 1</h2>
+    <h3>Homework 4, part 1</h3>
       
-	    <h2>Homework 4, part 1A</h2>
+	    <h4>Homework 4, part 1A</h4>
 	  <script>
   var sum = 0;
   var product = 1;
@@ -47,9 +84,9 @@ document.write( "<br>The sum of every 4th integer from 5 to 21 inclusive is: " +
 document.write( "<br>The product of every 4th integer from 5 to 21 inclusive is: " + product);
 </script>
 
+
 	
-	
-	    <h2>Homework 4, part 1B</h2>
+	    <h4>Homework 4, part 1B</h4>
  <script>
           var product, sum, x;
           
@@ -66,10 +103,15 @@ document.write( "<br>The product of every 4th integer from 5 to 21 inclusive is:
          document.write( "<br>The sum of every fourth number from 5 to 21 inclusive is " + sum);
  </script>
 
+    <h4>Dunk the cookie</h4>
+	<div id="draggable" class="ui-widget-content">
+  <p><img src="https://ionagael.github.io/CNIT133/images/cookie.png" class="cookiez" alt="cookie" height="100px" width=100px></p>
+</div>
 
+      <div class="parent">
+      <img class="image1" src="https://ionagael.github.io/CNIT133/images/cuptop.png">
 
-
-    
+    </div>
 
     
         <footer>
