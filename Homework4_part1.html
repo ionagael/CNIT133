@@ -34,19 +34,41 @@
         
     <h2>Homework 4, part 1</h2>
       
-       <script>
-         var product =1; 
-         var sum = 0;
-         var x=5;  
+	    <h2>Homework 4, part 1A</h2>
+	  <script>
+  var sum = 0;
+  var product = 1;
+  
+for ( var number = 5; number <= 21; number += 4 ) {
+sum += number;
+product *= number;
+}
+document.write( "<br>The sum of every 4th integer from 5 to 21 inclusive is: " + sum);
+document.write( "<br>The product of every 4th integer from 5 to 21 inclusive is: " + product);
+</script>
+
+	
+	
+	    <h2>Homework 4, part 1B</h2>
+ <script>
+          var product, sum, x;
+          
+          product = 1;
+          x = 5
+          sum = 0;	
 		
-         for   (x <= 21 ) {
+         while   (x <= 21 ) {
 	      product *= x;
-          sum += x; // 5+0=5. Now you take the next X, defined below, and add it. And then the next X and so on.
-	      x = x + 4;		// X, which is 5, + 5 =9
+          sum += x;
+	      x = x + 4;		
                             }
          document.write( "<br>The product of every fourth number from 5 to 21 inclusive is " + product);
          document.write( "<br>The sum of every fourth number from 5 to 21 inclusive is " + sum);
  </script>
+
+
+
+
     
 
     
