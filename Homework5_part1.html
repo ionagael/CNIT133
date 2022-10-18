@@ -11,8 +11,72 @@
        
         <!-- Site created by Phil Burkart on August 22, 2022 -->
 
+<style>
+   div.panel,p.flip
+{
+padding:2px;
+background:white;
+margin: 0;
+}
 
-        
+div.panel
+{
+height:100px;
+display:none;
+width: 350px;
+margin: 0;
+}        
+
+
+    
+    
+
+/* .error class is used for styling the error msg */
+
+.error {
+	font: normal 10px arial;
+	padding: 3px;
+	margin: 3px;
+	background-color: #ffc;
+}
+</style>
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- the following script is needed for jquery validation of input -->
+
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+
+<script> 
+
+
+// ready validation for form
+
+$(document).ready(function(){
+
+  $("#myform").validate({
+
+		messages: {
+			name: "Please enter your favorite coffee",
+                        rating: "Please choose one",
+                        team: "Please choose one",
+                        occ: "Please choose one",
+	    },
+
+  /* the following is needed to place an error msg after the radio and checkbox elements */
+
+  errorPlacement: function(error, element) {
+  if ( element.is(":radio") || element.is(":checkbox")) {
+    error.appendTo( element.parent());
+  } else {
+    error.insertAfter(element);
+  }
+  } // end errorPlacement
+ });
+});
+</script>
+
+          
 </head>
 
 
@@ -30,8 +94,66 @@
             <li><a href="https://ionagael.github.io/CNIT133/Homework8.html">Homework #8</a></li>
         </ul>
         
-    <h2>Homework 5, part 1 - Create a webpage containing a form that displays an input text box, radio buttons, checkboxes, and select items; along with a script that executes form validation.</h2>
-    
+    <h2>Homework 5, part 1</h2>
+    <section class="body">
+
+<h3>Create a webpage containing a form that displays an input text box, radio buttons, checkboxes, and select items; along with a script that executes form validation.</h3>
+
+<div>
+
+<br>
+
+<table>
+ <tr>
+ <td>
+ <form action="https://ionagael.github.io/CNIT133/Homework5_part1/formsubmission.html" method="post"  id="myform" name="myform">
+ <table>
+   <tr>
+   <td>Favorite Coffee</td>
+   <td><input type="text" name="name" id="name" size="20" class="required" autofocus></td>
+   </tr>
+   <!-- For error message to be appended correctly, must use only one parent tag (in this case <tr>)  
+and different id values for both radio and checkbox elements -->
+   <tr>
+   <td>With milk?</td>
+   <td>Yes<input type="radio" id="rating1" name="rating" class="required" value="good">
+   No<input type="radio" id="rating2" value="poor" name="rating"></td>
+   </tr>
+   <tr>
+   <td>Flavoring?</td>
+   <td>Vanilla<input type="checkbox" id="team1" name="team" value="Giants" class="required">
+   Caramel<input type="checkbox" id="team2" value="49ers" name="team">
+   </td>
+   </tr>
+   <tr>
+   <td><label for="occ" class="label">Topping:</label></td>
+   <td>
+   <select name="occ" id="occ" class="required">
+      <option value="">-Choose one-</option>
+      <option value="student">Cinnamon</option>
+      <option value="teacher">Whipped Cream</option>
+      <option value="programmer">Both</option>
+      <option value="other">None</option>
+   </select>
+   </td>
+   </tr>
+   <tr>
+   <td><input type="submit" id="submit_button" value="SUBMIT"></td>
+   <td><input type="reset" value="RESET" onclick="window.location.reload();"></td>
+       
+       
+
+       
+   </tr>
+ </table>
+ </form>
+ </td>
+ </tr>
+</table>
+
+</div>
+</section>
+
 
              
 
@@ -41,3 +163,4 @@
         
     </body>
 </html>
+
