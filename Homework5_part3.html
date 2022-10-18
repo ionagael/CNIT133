@@ -77,6 +77,8 @@ function ButtonPressed()
 
                 //if search key = 1st or 2nd element of a particular row
                 //then place in input boxes for price and comment, that is, the 3rd and 4th elements
+         
+      
        document.forms["SearchForm"].elements["state"].value = oilArray[row][1];
        document.forms["SearchForm"].elements["price"].value = oilArray[row][2];
        document.forms["SearchForm"].elements["comment"].value = oilArray[row][3];  
@@ -86,7 +88,9 @@ function ButtonPressed()
     }
 
   if ( found == false ) {
-   document.forms["SearchForm"].elements["comment"].value= "Oil Company not found!"; 
+   document.forms["SearchForm"].elements["comment"].value= "Population not found!"; 
+        document.forms["SearchForm"].elements["price"].value= "Capital not found!"; 
+              document.forms["SearchForm"].elements["state"].value= "State not found!"; 
        }
 
   }
@@ -118,7 +122,7 @@ function ButtonPressed()
    
 <section class="body">
 
-<h2>Oil Companies</h2>
+<h2>State Census Info:</h2>
 
 <p>Enter the state abbreviation or full state name for more information:
 </p>
