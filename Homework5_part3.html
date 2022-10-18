@@ -78,10 +78,11 @@ function ButtonPressed()
                 //if search key = 1st or 2nd element of a particular row
                 //then place in input boxes for price and comment, that is, the 3rd and 4th elements
          
-      
+     
        document.forms["SearchForm"].elements["state"].value = oilArray[row][1];
        document.forms["SearchForm"].elements["price"].value = oilArray[row][2];
-       document.forms["SearchForm"].elements["comment"].value = oilArray[row][3];  
+       document.forms["SearchForm"].elements["comment"].value = oilArray[row][3];    
+ document.getElementById("thanks").value = ("Thanks for your inquiry, here is the information you requested:");
        row = oilArray.length;   //ends loop if match found
        found = true;
      }
@@ -177,7 +178,8 @@ function ButtonPressed()
 <form name="SearchForm">
 <input type="text" size="20" name="inputGasVal" autofocus> 
 <input onclick="ButtonPressed();" type="button" value="State Info" name="search" id="search">
-
+<br><br>
+<textarea rows="1" cols="80" id="thanks"></textarea>
 <br><br>
     State Name
 
