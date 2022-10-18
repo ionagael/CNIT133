@@ -12,7 +12,87 @@
         <!-- Site created by Phil Burkart on August 22, 2022 -->
 
 
+<style>
+table
+{
+border-collapse:collapse;
+width: 300px;
+}
+
+table, td
+{
+border:1px solid black;
+}
+</style>
         
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> -->
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script>
+$(function() {
+ $( "#dialog" ).dialog({
+  autoOpen: false,
+  show: {
+    effect: "blind",
+    duration: 1000
+  },
+
+  hide: {
+    effect: "explode",
+    duration: 1000
+  }
+ });
+
+ $( "#opener" ).click(function() {
+  $( "#dialog" ).dialog( "open" );
+ });
+});
+</script>
+
+<script>
+var oilArray = [ ["AL", "ALABAMA", "Montgomery", "4,887,871"],                     
+                ["AK", "ALASKA", "Juneau", "7,171,646"],  
+                ["AZ", "ARIZONA", "Phoenix", "3,010,825"],
+                ["AR", "ARKANSAS", "Little Rock", "3,010,825"],
+                  ["CA", "California", "Sacramento", "39,557,045"],
+                   ["CO", "Colorado", "Denver", "5,694,564"],
+               
+               
+               ];    
+
+function ButtonPressed()
+  {   
+    var searchKey = document.forms["SearchForm"].elements["inputGasVal"].value;  //get searchkey from form input box
+    searchKey = searchKey.toUpperCase();     //change search key to upper case
+    
+    var found = false;
+    for (var row = 0; row < oilArray.length; row++) //loop for 4 rows
+     {
+     if ((oilArray[row][0] == searchKey) || (oilArray[row][1] == searchKey))
+
+                 //check if search key = 1st or 2nd element of each row
+     { 
+
+                //if search key = 1st or 2nd element of a particular row
+                //then place in input boxes for price and comment, that is, the 3rd and 4th elements
+       document.forms["SearchForm"].elements["state"].value = oilArray[row][1];
+       document.forms["SearchForm"].elements["price"].value = oilArray[row][2];
+       document.forms["SearchForm"].elements["comment"].value = oilArray[row][3];  
+       row = oilArray.length;   //ends loop if match found
+       found = true;
+     }
+    }
+
+  if ( found == false ) {
+   document.forms["SearchForm"].elements["comment"].value= "Oil Company not found!"; 
+       }
+
+  }
+</script>
+
+          
 </head>
 
 
@@ -30,10 +110,89 @@
             <li><a href="https://ionagael.github.io/CNIT133/Homework8.html">Homework #8</a></li>
         </ul>
         
-    <h2>Homework 5, part 3 - Given the following table of data about several of our states from the 2018 census, create a webpage that enables the user to enter a state name (full or just the two characters that represent the state) and have the State Name, State Capital, and population appear in separate input box or textarea. </h2>
-    
+    <h2>Homework 5, part 3</h2>
 
-             
+
+ <h3>Given the following table of data about several of our states from the 2018 census, create a webpage that enables the user to enter a state name (full or just the two characters that represent the state) and have the State Name, State Capital, and population appear in separate input box or textarea. </h3>
+    
+   
+<section class="body">
+
+<h2>Oil Companies</h2>
+
+<p>Enter the state abbreviation or full state name for more information:
+</p>
+
+
+<table>
+<tr>
+<td>AL</td>	
+<td>Alabama</td>	
+<td>Montgomery</td>		
+<td>4,887,871</td>	
+</tr>
+
+<tr>
+<td>AK</td>	
+<td>Alaska</td>	
+<td>Juneau</td>		
+<td>7,171,646</td>	
+</tr>
+
+<tr>
+<td>AZ</td>	
+<td>Arizona</td>	
+<td>Phoenix</td>		
+<td>3,010,825</td>	
+</tr>
+
+<tr>
+<td>AR</td>	
+<td>Arkansas</td>	
+<td>Little Rock</td>		
+<td>3,010,825</td>	
+</tr>
+    
+    <tr>
+<td>CA</td>	
+<td>California</td>	
+<td>Sacramento</td>		
+<td>39,557,045</td>	
+</tr>
+    
+        <tr>
+<td>CO</td>	
+<td>Colorado</td>	
+<td>Denver</td>		
+<td>5,694,564</td>	
+</tr>
+</table>
+
+<br>
+
+<form name="SearchForm">
+<input type="text" size="20" name="inputGasVal" autofocus> 
+<input onclick="ButtonPressed();" type="button" value="State Info" name="search" id="search">
+
+<br><br>
+    State Name
+
+<br>
+
+<input type="text" size="20" name="state" id="state"><br><br>
+
+State Capital
+
+<br>
+
+<input type="text" size="20" name="price" id="price"><br><br>
+State Population<br>
+<input type="text" size="20" name="comment" id="comment"><br><br>
+    
+<input type="reset" value="Reset" onclick="location.reload();">
+</form>
+
+</section>
 
     
         <footer>
@@ -41,3 +200,4 @@
         
     </body>
 </html>
+
