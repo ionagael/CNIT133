@@ -5,12 +5,100 @@
 <link href=mystyle.css rel=stylesheet>
   
        
-        <title>Homework 5 Arrays</title>
+        <title>Homework 6 Objects</title>
         <meta name="description" content="Home">
         <meta charset="utf-8">
        
         <!-- Site created by Phil Burkart on August 22, 2022 -->
+            
+            <script>
+                     
+         function roundNumber()
+         {
+            var re = new RegExp("^[0-9]\.[0-9]{4,10}$");
+            var errMsg = "Invalid input - Please enter a 0,1,2,3,4,5,6,7,8, or 9, followed by a decimal point, and then 4 to 10 decimal positions after the decimal point.";
 
+
+          if ( (document.getElementById("number").value) == "" || (!(re.test(document.getElementById("number").value))) )
+              {
+               document.getElementById("errOut").innerHTML = errMsg;
+               document.getElementById("output").value = "";
+
+              }
+            else {
+
+            var num = parseFloat
+               (document.getElementById("number").value);
+
+            document.myForm.output.value = 
+               "The entered number: " + num +
+               "\n rounded to the nearest integer using math round: " + 
+                  roundToIntegerRound( num ) +
+               "\n rounded to the nearest integer using math floor: " + 
+                  roundToIntegerFloor( num ) +
+               "\n rounded to the nearest tenth using toFixed: " + 
+                  roundToTenthsTofixed( num ) +
+               "\n rounded to the nearest hundredth using math floor: " + 
+                  roundToHundredthsFloor( num ) +
+                
+                
+    
+                
+                
+               "\n rounded to the nearest thousandths using math round: " + 
+                  roundToHundredthsRound( num ) +
+                
+               "\n rounded to an integer using toFixed and sqrt: " + 
+                  squareroot( num );
+                
+                  document.getElementById("errOut").innerHTML = "";
+                     
+                 }
+
+          }
+
+         function roundToIntegerRound( number )
+         {
+            return( Math.round( number) );
+         }
+
+         function roundToIntegerFloor( number )
+         {
+            return( Math.floor( number + .5 ) );
+         }
+
+         function roundToTenthsTofixed( number )
+         {
+            return( number.toFixed(1));
+         }
+
+         function roundToHundredthsFloor( number )
+         {
+            return( Math.floor( number * 100 + .5 ) / 100 );
+          }
+                
+                
+
+                
+        function roundToHundredthsRound( number )
+           {
+            return( Math.round( number * 1000 ) / 1000 );
+           }
+                
+                      function squareroot( number )
+           {
+            return((Math.sqrt(number)).toFixed(0));
+           }  
+
+        function res() {    
+                       document.getElementById("errOut").innerHTML="";
+                       document.getElementById("number").focus();
+                       }
+</script>
+          
+          <style>
+      .problem {font-size: 18px; font-weight: bold; color:red;}
+</style>
 </head>
 
 
@@ -33,10 +121,18 @@
 
 <h3>Create a webpage that contains a script that has  a function that uses Math.round, Math.sqrt, Math.floor, toFixed() etc.</h3>
 
-<div>
 
+<div class=problem id ="errOut"></div>
 
-</div>
+      <form name="myForm">
+         <label for="number">Enter an integer between 0 and 9 followed by followed by a decimal point and somewhere between 4 and 10 positions after the decimal. (For example: 0.2322, or 4.456666, or 7.0123456789)</label>: <br>
+         <input type="number" id="number"> 
+         <input type="button" value="Round" onclick="roundNumber()"><br>
+         <textarea name = "output" id="output" rows = "8" cols = "60" readonly>
+         </textarea><br>   
+        <input type="reset" value="Reset" onClick="res();">
+      </form>
+          
 </section>
 
 
