@@ -5,12 +5,45 @@
 <link href=mystyle.css rel=stylesheet>
   
        
-        <title>Homework 5 Arrays</title>
+        <title>Homework 6 Objects</title>
         <meta name="description" content="Home">
         <meta charset="utf-8">
        
         <!-- Site created by Phil Burkart on August 22, 2022 -->
 
+
+          
+         <script>
+
+         function search()
+         {
+            var count=0;
+            
+        
+            var key=document.getElementById("key").value.toLowerCase().charAt( 0 );
+             var key=key.toLowerCase();
+
+            var stringToSearch=document.getElementById("myTextarea").value;
+            var stringToSearch=stringToSearch.toLowerCase(); 
+
+                        
+             for (i=0; i < stringToSearch.length; i++)
+                     {
+
+                    if (stringToSearch.charAt(i) == key)
+                             count++;     
+                     }         
+      
+            if ( count == 0 )
+               document.getElementById("output").value=key + " not found";
+            else
+               document.getElementById("output").value=count + 
+                  " occurrence(s) of " + key + " found";
+         }
+</script>
+
+        
+          
 </head>
 
 
@@ -33,10 +66,33 @@
 
 <h3>Create a webpage that contains a script using a form that allows the user to input several lines of text and a search character and uses the String method charAt to determine the number of occurrences of the search character within the text.</h3>
 
-<div>
+
+        
+<p>Add text to box 1. Then, enter a character to search for in box 2. For example, you might enter "Mary had a little lamb" in box 1. In box 2, you might enter the character "l". After clicking "search", the result would be: "3 occurence(s) of l found"</p>
+        
+        
+<p>Box 1</p>
+<textarea id="myTextarea">
+Add text here.</textarea>
 
 
-</div>
+
+        
+        
+        
+      <form name="myForm">
+         
+         <p>Box 2
+            <input id="key" type="text" size="5">
+            <input type="button" value="Search" onclick="search();">
+             <input type="reset" value="Reset" onClick="location.reload();">
+
+         <br><br>
+         
+             Occurrences of the "Box 2" search character in the "Box 1" text:
+            <textarea cols="30" rows="1" id="output"></textarea>
+         </p>
+      </form>
 </section>
 
 
