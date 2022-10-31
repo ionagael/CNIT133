@@ -11,10 +11,55 @@
        
         <!-- Site created by Phil Burkart on August 22, 2022 -->
 
+    <script>
+         
+         function parseNumber() {
+       
+            var errMsg="Phone number has wrong format - Please use (999) 999-9999";     
+
+            var completeNumber = document.getElementById("input").value;
+
+            inputRegExp = /^(\()(\d{3})(\))(\s)(\d{3})(-\d{4})$/;
+            
+            // test to see if input is in valid format using a regular excpression
+      
+            if ( ! inputRegExp.test(completeNumber))
+
+                document.getElementById("errOut").innerHTML = errMsg;
+
+            else  {  
+
+                   // split zip main and zip extension
+                   var tokens = completeNumber.split( "-" );
+                   var zipMain = tokens[ 0 ];
+                   var zipExt = tokens[ 1 ];
+
+                  // output zip main code
+                zipCode = zipMain.substr(5, 7 );
+                   document.getElementById("zipCode").value = zipCode;
+
+                  // output zip extension
+                  document.getElementById("extension").value = zipExt;
+
+                  //get firts 3 characters of zip main
+                  zip3 = zipMain.substr( 1, 3 );
+                  document.getElementById("zip3").value = zip3;
+         
+                 }
+
+         }
+
+        function res() {   
+                       document.getElementById("errOut").innerHTML =""; 
+                       document.getElementById("input").focus();
+                       }
+</script>
+          
 </head>
 
 
-<body>
+
+<body onload="document.getElementById('input').focus();">
         <h1>CNIT 133 Homework 6 Objects</h1>
       
         <ul>
@@ -33,10 +78,60 @@
 
 <h3>Create a webpage that inputs a telephone number as a string in the format (999) 999-9999.</h3>
 
-<div>
+    <script>
 
+         //output local date and time, UTC date and time, and difference
+       
+          var current = new Date();
+          document.writeln( "<b>Current local date and time: " +
+                     current.toString() + "<br>Current UTC time and date: " + 
+           current.toUTCString() + "<br>  Hours difference between local and UTC time zones: " +  
+                    (current.getTimezoneOffset() / 60) + "</b>" );
 
-</div>
+      </script>
+        
+        
+<br><br>
+
+<div id ="errOut"></div> 
+<br>
+      <form name="myForm">
+         <table>
+            <tr>
+               <td>Enter a Phone Number <br>
+                  [in the form (999) 999-9999]
+               </td>
+               <td>
+                  <input id="input" type="text" size="10">
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <input type="button" value="Split" onclick="parseNumber()">
+               </td>
+            </tr>
+            <tr>
+               <td>First 3 characters of Phone Number</td>
+               <td>
+                  <input id="zipCode" type="text" size="5">
+               </td>
+            </tr>
+           <tr>
+               <td>Last 4 characters of Phone Number</td>   
+               <td>
+                   <input id="extension" type="text" size="4">
+               </td>
+           </tr>
+           <tr>
+               <td>Area Code</td>
+                 <td>
+                   <input id="zip3" type="text" size="4">
+                 </td>
+               
+            </tr>
+         </table>
+         <input type="reset" value="Reset" onClick="res();">
+      </form>
 </section>
 
 
