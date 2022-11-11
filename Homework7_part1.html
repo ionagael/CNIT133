@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+<link href=mystyle.css rel=stylesheet>
+  
+       
+        <title>Homework 7 Part 1</title>
+        <meta name="description" content="Home">
+        <meta charset="utf-8">
+       
+        <!-- Site created by Phil Burkart on August 22, 2022 -->
+
+
+          
+         <script>
+
+         function search()
+         {
+            var count=0;
+            
+        
+            var key=document.getElementById("key").value.toLowerCase().charAt( 0 );
+             var key=key.toLowerCase();
+
+            var stringToSearch=document.getElementById("myTextarea").value;
+            var stringToSearch=stringToSearch.toLowerCase(); 
+
+                        
+             for (i=0; i < stringToSearch.length; i++)
+                     {
+
+                    if (stringToSearch.charAt(i) == key)
+                             count++;     
+                     }         
+      
+            if ( count == 0 )
+               document.getElementById("output").value=key + " not found";
+            else
+               document.getElementById("output").value=count + 
+                  " occurrence(s) of " + key + " found";
+         }
+</script>
+
+        
+          
+</head>
+
+
+<body>
+        <h1>CNIT 133 Homework 7</h1>
+      
+        <ul>
+            <li><a href="https://ionagael.github.io/CNIT133/index.html">Homework Home</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework2.html">Homework #2</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework3.html">Homework #3</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework4.html">Homework #4</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework5.html">Homework #5</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework6.html">Homework #6</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework7.html">Homework #7</a></li>
+            <li><a href="https://ionagael.github.io/CNIT133/Homework8.html">Homework #8</a></li>
+        </ul>
+        
+    <h2>Homework 7, part 1</h2>
+
+  
+
+    
+        <footer>
+        </footer>
+        
+    </body>
+</html>
