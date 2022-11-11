@@ -8,12 +8,45 @@
         <meta charset="utf-8">
        
         <!-- Site created by Phil Burkart on August 22, 2022 -->
+        <link href="faqjquery.css" rel="stylesheet">
+        <style>
+h3 {
+	background: url(open.png) no-repeat 0 11px;
+	padding: 10px 0 0 25px;
+	cursor: pointer;
+}
+h3.close {
+	background-image: url(close.png);
+}
+.answer {
+	margin-left: 25px;	
+}
+</style>
+        
+        
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+ $('.answer').hide();
+ $('.main h3').toggle(
+		function() {
+	       $(this).next('.answer').slideDown();
+		   $(this).addClass('close');
+		},
+		function() {
+		   $(this).next('.answer').fadeOut();
+		   $(this).removeClass('close');
+	  }
+	); // end toggle
+}); // end ready
+</script>
         
         
 </head>
 
 <body>
-        <h1>Coming Soon!</h1>
+        <h1>CNIT 133 Homework 7 - Object Model and Event Model</h1>
       
         <ul>
             <li><a href="https://ionagael.github.io/CNIT133/index.html">Homework Home</a></li>    
@@ -25,6 +58,26 @@
             <li>Homework #7</li>
             <li><a href="https://ionagael.github.io/CNIT133/Homework8.html">Homework #8</a></li>
         </ul>
+    
+    
+<h2>Homework 7, parts 1-2</h2>
+    
+    <div class="wrapper">
+<div class="content">
+	<div class="main">
+<h3>Homework #7, part 1</h3>
+      <div class="answer">
+        <p>Create a webpage in which users are allowed to select a page layout and formatting through the use of the className property.</p>
+      </div>
+      <h3>Homework #7, part 2</h3>
+      <div class="answer">
+        <p>Write a script that displays a top navigation bar containing a link to your Homework 1 and five other links that will be to the cover page for each of your Homework2 - Homework6.</p>
+      </div>
+</div>
+</div>
+</div>
+    
+    
         <footer>
         </footer>
     </body>
