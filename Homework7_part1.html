@@ -10,45 +10,124 @@
         <meta charset="utf-8">
        
         <!-- Site created by Phil Burkart on August 22, 2022 -->
+<style>
+        /* Define three CSS classes corresponding to "themes" */
+        .theme1 {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            background-color: Linen;
+            font-size: .8em;
+        }
 
+        .theme2 {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: AliceBlue;
+            font-size: .9em;
+        }
+
+        .theme3 {
+            font-family: Georgia, serif;
+            background-color: MistyRose;
+            font-size: .85em;
+        }
+
+        /* The following CSS is just for basic layout and appearance */
+        #sampleText {
+            margin: 10px 30px;
+            padding: 0 10px;
+            border: 3px ridge gray;
+        }
+
+        #themeForm, #attributeForm {
+            float: left;
+            margin-left: 30px;
+        }
+
+        input[type='radio'] {
+            margin: 0 5px 0 0;
+        }
+
+        h1, h2, h3 {
+            margin: 10px 0;
+        }
+
+        table {
+            background-color: whitesmoke;
+        }
+
+        th {
+            color: white;
+            background-color: darkslategray;
+            text-align: left;
+        }
+
+        button {
+            margin-top: 10px;
+            font-size: .8em;
+        }
+    
+    .pencil{
+    font-size: 150px;
+    
+        
+    }
+    
+</style>
 
           
-         <script>
 
-         function search()
-         {
-            var count=0;
-            
-        
-            var key=document.getElementById("key").value.toLowerCase().charAt( 0 );
-             var key=key.toLowerCase();
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 
-            var stringToSearch=document.getElementById("myTextarea").value;
-            var stringToSearch=stringToSearch.toLowerCase(); 
+<script>
+        // Define a document ready handler
+        $(function () {
+            // Attach a click event handler to all the radio buttons in the attribute selection table
+            $("#attributeTable :radio").click(function () {
+                // The "this" variable refers to the radio button that was clicked.
+                // The HTML code defines the name attribute of the radio button as the name of the CSS property
+                // we want to set; the value of the radio button is the value we want to set the CSS property to.
+                // By doing this, the CSS of the sample text can be set easily with the following line of code:
+                $("#sampleText").css($(this).attr("name"), $(this).val());
+            });
 
-                        
-             for (i=0; i < stringToSearch.length; i++)
-                     {
+            // Attach a click event handler to the font size selection box
+            $("#fontSize").change(function () {
+                $("#sampleText").css($(this).attr("name"), $(this).val());
+            });
 
-                    if (stringToSearch.charAt(i) == key)
-                             count++;     
-                     }         
-      
-            if ( count == 0 )
-               document.getElementById("output").value=key + " not found";
-            else
-               document.getElementById("output").value=count + 
-                  " occurrence(s) of " + key + " found";
-         }
+            // Attach a click event handler to the checkboxes in the attribute selection table
+            $("#attributeTable :checkbox").change(function () {
+                $("#sampleText").css($(this).attr("name"), this.checked ? $(this).val() : "");
+            });
+
+            // Attach a click event handler to the radio buttons in the theme selection table
+            $("#themeTable :radio").click(function () {
+                // Clear specific CSS attributes that may have been set with the radio buttons in the attribute table
+                // by selecting all the one that have the checked attribute, and firing the click event
+                $("#attributeTable [checked]").click();
+
+                // Reset the select box by setting the value to ""
+                $("#fontSize").val("");
+
+                // Remove any class already set, and set the class to the one selected.
+                $("#sampleText").removeClass().addClass($(this).val());
+            });
+
+            // Attach a click event handler to the Reset All button
+            $("#resetAll").click(function () {
+                $("#themeTable [checked]").click(); // Clicks theme table elements that have a checked attribute
+                $("#attributeTable [checked]").click(); // Clicks attribute table elements that have a checked attribute
+                $("#fontSize").val(""); // Selects the font-size that has a value of ""
+                $("#attributeTable :checked").click(); // Clicks all the checkboxes that are checked (to uncheck them)
+            });
+        });
 </script>
-
         
           
 </head>
 
 
 <body>
-        <h1>CNIT 133 Homework 7 - Object Model and Event Model</h1>
+        <h1>CNIT 133 Homework 7</h1>
       
         <ul>
             <li><a href="https://ionagael.github.io/CNIT133/index.html">Homework Home</a></li>
@@ -63,6 +142,56 @@
         
     <h2>Homework 7, part 1</h2>
 
+<form id="themeForm">
+    <button type="button" id="resetAll">Reset All</button>
+</form>
+
+<form id="attributeForm">
+    <table id="attributeTable" border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Color</th>
+            <th>Size</th>
+            <th>Toppings</th>
+        </tr>
+        <tr>
+
+            <td>
+                <label><input type="radio" name="background-color" value="Azure"
+                              id="azure">Blue</label><br>
+                <label><input type="radio" name="background-color" value="Honeydew"
+                              id="honeydew">Green</label><br>
+                <label><input type="radio" name="background-color" value="Ivory"
+                              id="ivory">Orangeish</label><br>
+                <label><input type="radio" name="background-color" value="Lavender"
+                              id="lavender">Purple</label><br>
+                <label><input type="radio" name="background-color" value=""
+                              id="bgColorDefault" checked>Regular</label>
+            </td>
+            <td>
+                <select name="font-size" size="5" id="fontSize">
+                    <option value="50%">Small</option>
+                    <option value="100%">Medium</option>
+                    <option value="200%">Large</option>
+                </select>
+            </td>
+            <td>
+                <label><input type="checkbox" name="font-weight" value="bold" id="boldCheck">Bold</label><br>
+                <label><input type="checkbox" name="font-style" value="italic" id="italicCheck">Feisty</label><br>
+
+
+            </td>
+        </tr>
+    </table>
+</form>
+
+<br style="clear: both">
+<h2>How do you like your cats?</h2>
+<div id="sampleText">
+
+
+Cat
+    
+</div>
   
 
     
