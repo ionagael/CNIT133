@@ -84,7 +84,34 @@ div.imageinfo {
 
 
         
-               </style>
+          
+nav {background:#FFF; float:left;}
+nav ul {text-align:center;}
+nav ul li {float:left; display:inline;}
+nav ul li:hover {background:#E6E6E6;}
+nav ul li a {display:block; padding:15px 25px; color:#444; text-decoration:none; }
+nav ul li ul {position:absolute; width:120px; background:#444;}
+nav ul li ul li {width:120px;}
+nav ul li ul li a {display:block; padding:15px 10px; color:#FFF;}
+nav ul li ul li:hover a {background:#D1D1D1; color:#F00;}
+nav ul li ul.fallback {display:none;}
+nav ul li:hover ul.fallback {display:block;}
+</style>
+        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$('nav li ul').hide().removeClass('fallback');
+$('nav li').hover(
+  function () {
+    $('ul', this).stop().slideDown(200);
+  },
+  function () {
+    $('ul', this).stop().slideUp(200);
+  }
+);
+});
+</script>
         
         
 </head>
