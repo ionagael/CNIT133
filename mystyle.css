@@ -1,6 +1,7 @@
 
-
+<style>
 nav ul li:hover {background:lightgray;}
 nav ul li ul {position:absolute; width:120px; background:lightgreen;}
 nav ul li ul li:hover a {background:lightgray; color:red;}
 nav ul li ul.fallback {display:none;}
+</style>
