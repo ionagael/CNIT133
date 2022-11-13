@@ -1,11 +1,4 @@
-h1{
-  color:navy;
-  margin-left:20px
-}
 
-body{
-  background-color:#effaf6
-}
 
 nav ul li:hover {background:#E6E6E6;}
 nav ul li a {display:block; padding:15px 25px; color:#444; text-decoration:none; }
