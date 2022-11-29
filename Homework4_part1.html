@@ -34,40 +34,121 @@ body {background-color:#f5f5dc;
 </style>
      
 </head>
-
 <body>
-<section>
+        <h1>CNIT 133 Homework 4</h1>
+      
+               <nav>
+  <ul>
+   <li><a href="https://ionagael.github.io/CNIT133/index.html">Homework Home</a></li>   
+    <li>
+      <a href="https://ionagael.github.io/CNIT133/Homework2.html">Homework 2</a>
+      <ul class="fallback">
+        <li><a href="https://ionagael.github.io/CNIT133/Homework2_part1.html">Part 1</a></li>
+        <li><a href="https://ionagael.github.io/CNIT133/Homework2_part2.html">Part 2</a></li>
+        <li><a href="https://ionagael.github.io/CNIT133/Homework2_part3.html">Part 3</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="https://ionagael.github.io/CNIT133/Homework3.html">Homework 3</a>
+      <ul class="fallback">
+        <li><a href="https://ionagael.github.io/CNIT133/Homework3_part1.html">Part 1</a></li>
+        <li><a href="https://ionagael.github.io/CNIT133/Homework3_part2.html">Part 2</a></li>
+        <li><a href="https://ionagael.github.io/CNIT133/Homework3_part3.html">Part 3</a></li>
+                  <li><a href="https://ionagael.github.io/CNIT133/Homework3_part4.html">Part 4</a></li>
+      </ul>
+    </li>
+          <li>
+      <a href="https://ionagael.github.io/CNIT133/Homework4.html">Homework 4</a>
+      <ul class="fallback">
+        <li><a href="https://ionagael.github.io/CNIT133/Homework4_part1.html">Part 1</a></li>
+        <li><a href="https://ionagael.github.io/CNIT133/Homework4_part2.html">Part 2</a></li>
+      </ul>
+    </li>
+                <li>
+      <a href="https://ionagael.github.io/CNIT133/Homework5.html">Homework 5</a>
+      <ul class="fallback">
+        <li><a href="https://ionagael.github.io/CNIT133/Homework5_part1.html">Part 1</a></li>
+        <li><a href="https://ionagael.github.io/CNIT133/Homework5_part2.html">Part 2</a></li>
+                  <li><a href="https://ionagael.github.io/CNIT133/Homework5_part3.html">Part 3</a></li>
+      </ul>
+    </li>
+      
+                      <li>
+      <a href="https://ionagael.github.io/CNIT133/Homework6.html">Homework 6</a>
+      <ul class="fallback">
+        <li><a href="https://ionagael.github.io/CNIT133/Homework6_part1.html">Part 1</a></li>
+        <li><a href="https://ionagael.github.io/CNIT133/Homework6_part2.html">Part 2</a></li>
+                  <li><a href="https://ionagael.github.io/CNIT133/Homework6_part3.html">Part 3</a></li>
+      </ul>
+    </li>
+      
+                            <li>
+      <a href="https://ionagael.github.io/CNIT133/Homework7.html">Homework 7</a>
+      <ul class="fallback">
+        <li><a href="https://ionagael.github.io/CNIT133/Homework7_part1.html">Part 1</a></li>
+        <li><a href="https://ionagael.github.io/CNIT133/Homework7_part2.html">Part 2</a></li>
 
+      </ul>
+    </li>
+      
+         <li><a href="https://ionagael.github.io/CNIT133/Homework8.html">Homework 8</a></li> 
+      
+  </ul>
+</nav>
+             <br> <br> <br>
+    <h3>Homework 4, part 1</h3>
+      
+	    <h4>Homework 4, part 1A</h4>
+	  <script>
+  var sum = 0;
+  var product = 1;
+  
+for ( var number = 5; number <= 21; number += 4 ) {
+sum += number;
+product *= number;
+}
+document.write( "<br>The sum of every 4th integer from 5 to 21 inclusive is: " + sum);
+document.write( "<br>The product of every 4th integer from 5 to 21 inclusive is: " + product);
+</script>
+
+
+	
+	    <h4>Homework 4, part 1B</h4>
  <script>
           var product, sum, x;
+          
           product = 1;
-          x = 1;
+          x = 3
           sum = 0;	
 		
-         while   (x <= 11 ) {
+         while   (x <= 21 ) {
 	      product *= x;
-              sum += x;
-	      x = x + 2;		
+          sum += x;
+	      x = x + 3;		
                             }
-         document.write( "<h2>While loop - odd numbers from 1 to 11</h2>" );
-         document.write( "<br>The Product of the odd numbers from 1 to 11 inclusive is " + product + "<br>");
-         document.write( "<br>The Sum of the odd numbers from 1 to 11 inclusive is " + sum);
+         document.write( "<br>The product of every 3rd integer from 3 to 21 inclusive is " + product);
+         document.write( "<br>The sum of every 3rd integer from 3 to 21 inclusive is " + sum);
  </script>
-
+	
  <script>  <!-- using jQuery UI draggable again -->
  $(function() {
    $( "#draggable" ).draggable();
  });
  </script>
- 
-<br><br>
-
+    <h4>Fill the cup with the cookie</h4>
+    
 <div id="draggable">
- <p>Try to drag this div around</p>
+ <p>Cookie</p>
 </div>
 
-<p>This paragraph is not draggable as it's not inside the draggable div</p>
 
-</section>
-</body>
+      <img class="image1" src="https://ionagael.github.io/CNIT133/images/cuptop.png" alt="cup">
+
+
+
+    
+        <footer>
+        </footer>
+        
+    </body>
 </html>
