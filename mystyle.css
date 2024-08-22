@@ -1,5 +1,8 @@
 <style>
-h2 {text-align: center}
+h2 {
+  text-align: center;
+}
+
 img {
   float: right;
   border: 1px dotted black;
