@@ -89,6 +89,30 @@
         <button id="darkThemeButton">Dark Theme</button>
     </footer>
 
+    <p>it is possible to have multiple trigger types in HTMX. You can use the hx-trigger attribute. When the <select> element changes or when the page loads, there will be a trigger. Here's the code:</p>
+    <select name="city" id="city" 
+        hx-post="/api/search" 
+        hx-trigger="load, change"
+        hx-target="#result">
+    <option>San Francisco</option>
+    <option>New York</option>
+    <option>Las Vegas</option>
+</select>
+    <p>
+hx-post="/api/search": specifies that a POST request should be sent to the endpoint /api/search whenever the trigger conditions are met. The value "/api/search" represents the URL or API endpoint where the POST request will be sent. This is where your server-side logic will handle the request and return a response based on the selected city.
+
+hx-trigger="load, change": This attribute tells HTMX to trigger the request on both the load event (when the page is first loaded) and the change event (when the user selects a different option from the dropdown). By listing both triggers, you ensure that the request is made initially when the page loads and anytime the user changes their selection.
+
+hx-target="#result": This attribute specifies that the response from the /api/search POST request should be displayed in the element with the ID result. This is where the result of the search (or any other action your server performs based on the selected city) will be rendered.
+
+What Happens:
+On Page Load: When the page initially loads, a POST request is automatically sent to /api/search with the selected city value (if any).
+On Selection Change: When the user selects a different city from the dropdown, another POST request is sent to /api/search, and the response is updated in the #result element.
+This combination of triggers gives you the desired behavior with HTMX.
+        
+    </p>
+        
+
     <!-- Include jQuery library -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
