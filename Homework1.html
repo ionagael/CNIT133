@@ -1,107 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-       <head>
-<link href=mystyle.css rel=stylesheet>
 
+    <head>
+       <link href=mystyle.css rel=stylesheet>
+            <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+     <title>Changing Theme</title>
        
-        <title>CNIT 133 Homework 2 - Basic Operations</title>
-        <meta name="description" content="Home">
-        <meta charset="utf-8">
-               
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-$('nav li ul').hide().removeClass('fallback');
-$('nav li').hover(
-  function () {
-    $('ul', this).stop().slideDown(200);
-  },
-  function () {
-    $('ul', this).stop().slideUp(200);
-  }
-);
-});
-</script>
+<!-- Site created by Phil Burkart on August 30, 2024 -->
+         <style>
+        h1 {
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            margin-top: 1.2rem;
+        }
+        button {
+            color: black;
+            background-color: darkgray;
+            width: auto;
+            margin: 0 10px;
+            height: 30px;
+        }
+        section {
+            font-size: 1.2rem;
+        }
+        section h2 {
+            text-align: center;
+            font-size: 1.6rem;
+            font-style: italic;
+        }
+        figure {
+            text-align: center;
+            margin: 0 auto;
+        }
+    </style>   
 </head>
 
-
 <body>
-        <h1>CNIT 133 Homework #2 Basic Operations</h1>
-      
-               <nav>
-  <ul>
-   <li><a href="https://ionagael.github.io/CNIT133/index.html">Homework Home</a></li>   
-    <li>
-      <a href="https://ionagael.github.io/CNIT133/Homework2.html">Homework 2</a>
-      <ul class="fallback">
-        <li><a href="https://ionagael.github.io/CNIT133/Homework2_part1.html">Part 1</a></li>
-        <li><a href="https://ionagael.github.io/CNIT133/Homework2_part2.html">Part 2</a></li>
-        <li><a href="https://ionagael.github.io/CNIT133/Homework2_part3.html">Part 3</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="https://ionagael.github.io/CNIT133/Homework3.html">Homework 3</a>
-      <ul class="fallback">
-        <li><a href="https://ionagael.github.io/CNIT133/Homework3_part1.html">Part 1</a></li>
-        <li><a href="https://ionagael.github.io/CNIT133/Homework3_part2.html">Part 2</a></li>
-        <li><a href="https://ionagael.github.io/CNIT133/Homework3_part3.html">Part 3</a></li>
-                  <li><a href="https://ionagael.github.io/CNIT133/Homework3_part4.html">Part 4</a></li>
-      </ul>
-    </li>
-          <li>
-      <a href="https://ionagael.github.io/CNIT133/Homework4.html">Homework 4</a>
-      <ul class="fallback">
-        <li><a href="https://ionagael.github.io/CNIT133/Homework4_part1.html">Part 1</a></li>
-        <li><a href="https://ionagael.github.io/CNIT133/Homework4_part2.html">Part 2</a></li>
-      </ul>
-    </li>
-                <li>
-      <a href="https://ionagael.github.io/CNIT133/Homework5.html">Homework 5</a>
-      <ul class="fallback">
-        <li><a href="https://ionagael.github.io/CNIT133/Homework5_part1.html">Part 1</a></li>
-        <li><a href="https://ionagael.github.io/CNIT133/Homework5_part2.html">Part 2</a></li>
-                  <li><a href="https://ionagael.github.io/CNIT133/Homework5_part3.html">Part 3</a></li>
-      </ul>
-    </li>
-      
-                      <li>
-      <a href="https://ionagael.github.io/CNIT133/Homework6.html">Homework 6</a>
-      <ul class="fallback">
-        <li><a href="https://ionagael.github.io/CNIT133/Homework6_part1.html">Part 1</a></li>
-        <li><a href="https://ionagael.github.io/CNIT133/Homework6_part2.html">Part 2</a></li>
-                  <li><a href="https://ionagael.github.io/CNIT133/Homework6_part3.html">Part 3</a></li>
-      </ul>
-    </li>
-      
-                            <li>
-      <a href="https://ionagael.github.io/CNIT133/Homework7.html">Homework 7</a>
-      <ul class="fallback">
-        <li><a href="https://ionagael.github.io/CNIT133/Homework7_part1.html">Part 1</a></li>
-        <li><a href="https://ionagael.github.io/CNIT133/Homework7_part2.html">Part 2</a></li>
+  <h1>CNIT 133A Homework 1</h1>
 
-      </ul>
-    </li>
-      
-         <li><a href="https://www.philipburkart.website">Homework 8</a></li> 
-      
-  </ul>
-</nav>
-             <br> <br> <br>
-<h2>Homework 2, part 1</h2>
-        
-        <ol>
-            <li>Homework #2, part 1: Web page displayed in pairs and strong (bold), the letters ab and the numbers 12 and 34 on the same line, with each pair of characters separated by one space.</li>
-            <li><a href="https://ionagael.github.io/CNIT133/Homework2_part2.html">Homework #2, part 2:</a> Web page containing a script that inputs three integers via form text boxes and displays the sum, average, and product of the three integers, and the smallest and largest of the three integers.</li>
-            <li><a href="https://ionagael.github.io/CNIT133/Homework2_part3.html">Homework #2, part 3:</a> Web page containing a script that inputs 5 numbers and determines and displays the count of the negative numbers, the number of positive numbers, and the number of zeros.</li>
-        </ol>
+ 
 
-           <h3>See below for answer to part 1:</h3>
-           
-       <script>  
-              document.write("<p><strong><span style=color:red><span style=font-family: Times New Roman>ab</span></span> <span style=color:blue><span style=font-family:Arial>12 </span></span><em><span style=color:green><span style=font-family:Impact>34</span></span></em></strong></p>");
-       </script>
-        
+   
+ 
+<body class="light-theme">
+        <header>
+            <h1>Changing Themes</h1>
+        </header>
+
+
+    
+        <section>
+            <h2>Using jQuery</h2>
+            <p>We will create a jQuery code so if the user clicks on Light Theme button, you will apply the appropriate class to make the whole page lighter. The image below will also be changed to show the image of the sun! If the Dark Theme button is clicked, the image of the moon will be displayed and the appropriate class will be applied to the whole page as well</p>
+            <figure>
+                 <img src="https://github.com/ionagael/CNIT133/blob/main/images/sun.PNG?raw=true" alt="cartoon sun" width="300" height="280" class="theme-icon">
+            </figure>
+        </section>
         <footer>
+    <button id="lightThemeButton">Light Theme</button>
+            <button id="dark">Dark Theme</button>
         </footer>
+
+
+        
+
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#lightThemeButton').click(function() {
+                // Apply the light theme by adding the 'light-theme' class to the body
+                $('body').addClass('light-theme');
+            });
+        });
+    </script>
+    
     </body>
 </html>
