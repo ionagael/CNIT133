@@ -9,8 +9,6 @@
     <meta name="viewport" content=
         "width=device-width, initial-scale=1.0">
      <title>Changing Theme</title>
-        <meta name="description" content="Home">
-        <meta charset="utf-8">
        
 <!-- Site created by Phil Burkart on August 30, 2024 -->
          <style>
@@ -50,25 +48,38 @@
 
    
  
-<body>
+<body class="light-theme">
         <header>
             <h1>Changing Themes</h1>
         </header>
+
+
+    
         <section>
             <h2>Using jQuery</h2>
             <p>We will create a jQuery code so if the user clicks on Light Theme button, you will apply the appropriate class to make the whole page lighter. The image below will also be changed to show the image of the sun! If the Dark Theme button is clicked, the image of the moon will be displayed and the appropriate class will be applied to the whole page as well</p>
             <figure>
-                 <img src="https://github.com/ionagael/CNIT133/blob/main/images/sun.PNG?raw=true" alt="cartoon sun" width="300" height="280">
+                 <img src="https://github.com/ionagael/CNIT133/blob/main/images/sun.PNG?raw=true" alt="cartoon sun" width="300" height="280" class="theme-icon">
             </figure>
         </section>
         <footer>
-            <button id="light">Light Theme</button>
+    <button id="lightThemeButton">Light Theme</button>
             <button id="dark">Dark Theme</button>
         </footer>
 
 
         
-        <footer>
-        </footer>
+
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#lightThemeButton').click(function() {
+                // Apply the light theme by adding the 'light-theme' class to the body
+                $('body').addClass('light-theme');
+            });
+        });
+    </script>
+    
     </body>
 </html>
