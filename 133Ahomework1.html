@@ -50,11 +50,21 @@
             color: black;
         }
 
+        /* Dark theme styles */
+        body.dark-theme {
+            background-color: black;
+            color: white;
+        }
+
         .theme-icon {
             display: none;
         }
 
-        body.light-theme .theme-icon {
+        body.light-theme .sun-icon {
+            display: block;
+        }
+
+        body.dark-theme .moon-icon {
             display: block;
         }
     </style>
@@ -69,13 +79,14 @@
         <h2>Using jQuery</h2>
         <p>We will create a jQuery code so if the user clicks on the Light Theme button, you will apply the appropriate class to make the whole page lighter. The image below will also be changed to show the image of the sun! If the Dark Theme button is clicked, the image of the moon will be displayed and the appropriate class will be applied to the whole page as well.</p>
         <figure>
-            <img src="https://github.com/ionagael/CNIT133/blob/main/images/sun.jpeg?raw=true" alt="cartoon sun" width="300" height="280" class="theme-icon">
+            <img src="https://github.com/ionagael/CNIT133/blob/main/images/sun.jpeg?raw=true" alt="cartoon sun" width="300" height="280" class="theme-icon sun-icon">
+            <img src="https://github.com/ionagael/CNIT133/blob/main/images/moon.jpeg?raw=true" alt="cartoon moon" width="300" height="280" class="theme-icon moon-icon">
         </figure>
     </section>
 
     <footer>
         <button id="lightThemeButton">Light Theme</button>
-        <button id="dark">Dark Theme</button>
+        <button id="darkThemeButton">Dark Theme</button>
     </footer>
 
     <!-- Include jQuery library -->
@@ -84,7 +95,12 @@
         $(document).ready(function () {
             $('#lightThemeButton').click(function () {
                 // Apply the light theme by adding the 'light-theme' class to the body
-                $('body').addClass('light-theme');
+                $('body').removeClass('dark-theme').addClass('light-theme');
+            });
+
+            $('#darkThemeButton').click(function () {
+                // Apply the dark theme by adding the 'dark-theme' class to the body
+                $('body').removeClass('light-theme').addClass('dark-theme');
             });
         });
     </script>
