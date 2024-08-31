@@ -99,8 +99,8 @@
 </select>
     
        <ul>
- <li>hx-post="/api/search": specifies that a POST request should be sent to the endpoint /api/search whenever the trigger conditions are met. The value "/api/search" represents the URL or API endpoint where the POST request will be sent. This is where your server-side logic will handle the request and return a response based on the selected city.</li>
- <li>hx-trigger="load, change": This attribute tells HTMX to trigger the request on both the load event (when the page is first loaded) and the change event (when the user selects a different option from the dropdown). By listing both triggers, you ensure that the request is made initially when the page loads and anytime the user changes their selection.</li>
+ <li>hx-post="/api/search": specifies that a POST request should be sent to the endpoint /api/search whenever the trigger conditions are met. The value "/api/search" represents the URL or API endpoint where the POST request will be sent.</li>
+ <li>hx-trigger="load, change": This attribute tells HTMX to trigger the request on both the load event (when the page is first loaded) and the change event (when the user selects a different option from the dropdown).</li>
  <li>hx-target="#result": This attribute specifies that the response from the /api/search POST request should be displayed in the element with the ID result. This is where the result of the search (or any other action your server performs based on the selected city) will be rendered.</li>
 </ul>
     
