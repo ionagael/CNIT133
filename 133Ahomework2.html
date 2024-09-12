@@ -7,53 +7,100 @@
 <title>D3 Homework</title>
     <!-- Site created by Phil Burkart on August 30, 2024 -->
   <style>
-#chart rect{
+#chart rect {
   fill: #4aaeea;
 }
 
-#chart text{
+#chart text {
   fill: white;
   font: 10px sans-serif;
   text-anchor: end; 
 }
 
-.axis text{
+.axis text {
   font: 10px sans-serif;
 }
 
-.axis path, .axis line{
+.axis path, .axis line {
   fill: none;
-  stroke : #fff;
+  stroke: #fff;
   shape-rendering: crispEdges;
 }
 
-body{
+body {
   background: #1a1a1a;
-  color : #eaeaea;
-  padding : 10px;
+  color: #eaeaea;
+  padding: 10px;
 }
-</style>
+  </style>
 </head>
 
 <body class="light-theme">
-                 <ul>
+    <ul>
         <li><a href="https://ionagael.github.io/CNIT133">Home</a></li>
-      </ul>
+    </ul>
         
-    
     <header>
         <h1>D3 Homework</h1>
     </header>
 
+    <div id="chart"></div> 
 
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+      // Define the dataset
+      var data = [
+        { "term": "Spring 16", "students": 160 },
+        { "term": "Fall 16", "students": 170 },
+        { "term": "Spring 17", "students": 120 },
+        { "term": "Fall 17", "students": 185 },
+        { "term": "Spring 18", "students": 190 },
+        { "term": "Fall 18", "students": 195 }
+      ];
 
+      // Set dimensions and margins for the chart
+      var margin = { top: 20, right: 30, bottom: 40, left: 40 },
+          width = 960 - margin.left - margin.right,
+          height = 500 - margin.top - margin.bottom;
 
+      // Create the SVG container
+      var svg = d3.select("#chart").append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-<body>
-<div id="chart"></div> 
+      // Set up the scales
+      var x = d3.scaleBand()
+          .domain(data.map(function(d) { return d.term; }))
+          .range([0, width])
+          .padding(0.1);
+
+      var y = d3.scaleLinear()
+          .domain([0, d3.max(data, function(d) { return d.students; })])
+          .nice()
+          .range([height, 0]);
+
+      // Add the bars
+      svg.selectAll(".bar")
+        .data(data)
+        .enter().append("rect")
+          .attr("class", "bar")
+          .attr("x", function(d) { return x(d.term); })
+          .attr("y", function(d) { return y(d.students); })
+          .attr("width", x.bandwidth())
+          .attr("height", function(d) { return height - y(d.students); });
+
+      // Add the x-axis
+      svg.append("g")
+          .attr("class", "axis axis-x")
+          .attr("transform", "translate(0," + height + ")")
+          .call(d3.axisBottom(x));
+
+      // Add the y-axis
+      svg.append("g")
+          .attr("class", "axis axis-y")
+          .call(d3.axisLeft(y));
+    </script>
 </body>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-
-
-
 </html>
