@@ -50,6 +50,7 @@ body {
   <script>
     // Fetch the data from the JSON file
     d3.json("https://ionagael.github.io/CNIT133/data.json").then(function(data) {
+      console.log(data);  // Debugging line
       // Set dimensions and margins for the chart
       var margin = { top: 20, right: 30, bottom: 40, left: 40 },
           width = 960 - margin.left - margin.right,
