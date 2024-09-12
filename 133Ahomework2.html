@@ -97,7 +97,7 @@ body {
         .range([height, 0]);
 
     // Add the bars
-    var bars = svg.selectAll(".bar")
+    svg.selectAll(".bar")
       .data(data)
       .enter().append("rect")
         .attr("class", "bar")
