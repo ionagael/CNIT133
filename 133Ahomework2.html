@@ -36,66 +36,66 @@ body {
 </head>
 
 <body class="light-theme">
-    <ul>
-        <li><a href="https://ionagael.github.io/CNIT133">Home</a></li>
-    </ul>
-        
-    <header>
-        <h1>D3 Homework</h1>
-    </header>
+  <ul>
+    <li><a href="https://ionagael.github.io/CNIT133">Home</a></li>
+  </ul>
+  
+  <header>
+    <h1>D3 Homework</h1>
+  </header>
 
-    <div id="chart"></div> 
+  <div id="chart"></div> 
 
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script>
-      // Fetch the data from the external JSON file
-      d3.json("https://ionagael.github.io/CNIT133/images/data.json").then(function(data) {
-        // Set dimensions and margins for the chart
-        var margin = { top: 20, right: 30, bottom: 40, left: 40 },
-            width = 960 - margin.left - margin.right,
-            height = 500 - margin.top - margin.bottom;
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script>
+    // Fetch the data from the JSON file
+    d3.json("data.json").then(function(data) {
+      // Set dimensions and margins for the chart
+      var margin = { top: 20, right: 30, bottom: 40, left: 40 },
+          width = 960 - margin.left - margin.right,
+          height = 500 - margin.top - margin.bottom;
 
-        // Create the SVG container
-        var svg = d3.select("#chart").append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-          .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      // Create the SVG container
+      var svg = d3.select("#chart").append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        // Set up the scales
-        var x = d3.scaleBand()
-            .domain(data.map(function(d) { return d.term; }))
-            .range([0, width])
-            .padding(0.1);
+      // Set up the scales
+      var x = d3.scaleBand()
+          .domain(data.map(function(d) { return d.term; }))
+          .range([0, width])
+          .padding(0.1);
 
-        var y = d3.scaleLinear()
-            .domain([0, d3.max(data, function(d) { return d.students; })])
-            .nice()
-            .range([height, 0]);
+      var y = d3.scaleLinear()
+          .domain([0, d3.max(data, function(d) { return d.students; })])
+          .nice()
+          .range([height, 0]);
 
-        // Add the bars
-        svg.selectAll(".bar")
-          .data(data)
-          .enter().append("rect")
-            .attr("class", "bar")
-            .attr("x", function(d) { return x(d.term); })
-            .attr("y", function(d) { return y(d.students); })
-            .attr("width", x.bandwidth())
-            .attr("height", function(d) { return height - y(d.students); });
+      // Add the bars
+      svg.selectAll(".bar")
+        .data(data)
+        .enter().append("rect")
+          .attr("class", "bar")
+          .attr("x", function(d) { return x(d.term); })
+          .attr("y", function(d) { return y(d.students); })
+          .attr("width", x.bandwidth())
+          .attr("height", function(d) { return height - y(d.students); });
 
-        // Add the x-axis
-        svg.append("g")
-            .attr("class", "axis axis-x")
-            .attr("transform", "translate(0," + height + ")")
-            .call(d3.axisBottom(x));
+      // Add the x-axis
+      svg.append("g")
+          .attr("class", "axis axis-x")
+          .attr("transform", "translate(0," + height + ")")
+          .call(d3.axisBottom(x));
 
-        // Add the y-axis
-        svg.append("g")
-            .attr("class", "axis axis-y")
-            .call(d3.axisLeft(y));
-      }).catch(function(error) {
-        console.error('Error loading or parsing data:', error);
-      });
-    </script>
+      // Add the y-axis
+      svg.append("g")
+          .attr("class", "axis axis-y")
+          .call(d3.axisLeft(y));
+    }).catch(function(error) {
+      console.error('Error loading or parsing data:', error);
+    });
+  </script>
 </body>
 </html>
