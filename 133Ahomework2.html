@@ -1,217 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 
-       <head>
-              <link href=mystyle.css rel=stylesheet>
-              <title>CNIT 133 Homework 2 - Basic Operations</title>
-       <meta name="description" content="Home">
-       <meta charset="utf-8">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-$('nav li ul').hide().removeClass('fallback');
-$('nav li').hover(
-  function () {
-    $('ul', this).stop().slideDown(200);
-  },
-  function () {
-    $('ul', this).stop().slideUp(200);
-  }
-);
-});
-</script>  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>      
-<script>
-$(document).ready(function(){
-  $("button").click(function(){
-    $("#div1").fadeTo("slow", 0.15);
-    $("#div2").fadeTo("slow", 0.4);
-  });
-});
-</script>
-
-<script>
-
-       
-       function process()
-{
-
-var number1, number2, number3, n1, n2, n3, result;
-number1 = document.getElementById("num1").value;
-number2 = document.getElementById("num2").value;
-number3 = document.getElementById("num3").value;
-n1 = parseInt(number1);
-n2 = parseInt(number2);
-n3 = parseInt(number3);
-if (isNaN(number1) || isNaN(number2) || isNaN(number3))
-{
-     alert('Please enter numbers.');
-     return;
- }
-
-var number1, number2, number3, n1, n2, n3, result;
-number1 = document.getElementById("num1").value;
-number2 = document.getElementById("num2").value;
-number3 = document.getElementById("num3").value;
-n1 = parseInt(number1);
-n2 = parseInt(number2);
-n3 = parseInt(number3);
-       if (number1 == "" || number2 == "" || number3 == "")
- 
- {
-    alert('Please enter numbers.');
-    return;
- }
-       
-var number1, number2, number3, n1, n2, n3, result;
-number1 = document.getElementById("num1").value;
-number2 = document.getElementById("num2").value;
-number3 = document.getElementById("num3").value;
-n1 = parseInt(number1);
-n2 = parseInt(number2);
-n3 = parseInt(number3);
-result = n1 + n2 + n3;
-document.getElementById("sum").value = (+ result);
- 
-var number1, number2, number3, n1, n2, n3, result;
-number1 = document.forms["myform"].elements["num1"].value;
-number2 = document.forms["myform"].elements["num2"].value;
-number3 = document.forms["myform"].elements["num3"].value;
-n1 = parseInt(number1);
-n2 = parseInt(number2);
-n3 = parseInt(number3);
-result = n1 * n2 * n3;
-document.forms["myform"].elements["product"].value = result;
-
-var number1, number2, number3, n1, n2, n3, result;
-number1 = document.getElementById("num1").value;
-number2 = document.getElementById("num2").value;
-number3 = document.getElementById("num3").value;
-n1 = parseInt(number1);
-n2 = parseInt(number2);
-n3 = parseInt(number3);
-result = (n1 + n2 + n3)/3;
-document.getElementById("average").value = (+ result);
-
-var number1, number2, number3, n1, n2, n3, result;
-number1 = document.getElementById("num1").value;
-number2 = document.getElementById("num2").value;
-number3 = document.getElementById("num3").value;
-n1 = parseInt(number1);
-n2 = parseInt(number2);
-n3 = parseInt(number3);
-result = Math.min(n1,n2,n3);
-document.getElementById("smallest").value = (+ result);
-
-var number1, number2, number3, n1, n2, n3, result;
-number1 = document.getElementById("num1").value;
-number2 = document.getElementById("num2").value;
-number3 = document.getElementById("num3").value;
-n1 = parseInt(number1);
-n2 = parseInt(number2);
-n3 = parseInt(number3);
-result = Math.max(n1,n2,n3);
-document.getElementById("largest").value = (+ result);
+<head>
+<meta charset="utf-8">
+<meta name="description" content="D3 homework">
+<title>D3 Homework</title>
+    <!-- Site created by Phil Burkart on August 30, 2024 -->
+  <style>
+#chart rect{
+  fill: #4aaeea;
 }
-       
-</script>
-       
-       </head>
-       
-    <body style>
-              
-              <h1>CNIT 133 Homework #2 Basic Operations</h1>
-              <nav>
-  <ul>
-   <li><a href="https://ionagael.github.io/CNIT133/index.html">Homework Home</a></li>   
-    <li>
-      <a href="https://ionagael.github.io/CNIT133/Homework2.html">Homework 2</a>
-      <ul class="fallback">
-        <li><a href="https://ionagael.github.io/CNIT133/Homework2_part1.html">Part 1</a></li>
-        <li><a href="https://ionagael.github.io/CNIT133/Homework2_part2.html">Part 2</a></li>
-        <li><a href="https://ionagael.github.io/CNIT133/Homework2_part3.html">Part 3</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="https://ionagael.github.io/CNIT133/Homework3.html">Homework 3</a>
-      <ul class="fallback">
-        <li><a href="https://ionagael.github.io/CNIT133/Homework3_part1.html">Part 1</a></li>
-        <li><a href="https://ionagael.github.io/CNIT133/Homework3_part2.html">Part 2</a></li>
-        <li><a href="https://ionagael.github.io/CNIT133/Homework3_part3.html">Part 3</a></li>
-                  <li><a href="https://ionagael.github.io/CNIT133/Homework3_part4.html">Part 4</a></li>
-      </ul>
-    </li>
-          <li>
-      <a href="https://ionagael.github.io/CNIT133/Homework4.html">Homework 4</a>
-      <ul class="fallback">
-        <li><a href="https://ionagael.github.io/CNIT133/Homework4_part1.html">Part 1</a></li>
-        <li><a href="https://ionagael.github.io/CNIT133/Homework4_part2.html">Part 2</a></li>
-      </ul>
-    </li>
-                <li>
-      <a href="https://ionagael.github.io/CNIT133/Homework5.html">Homework 5</a>
-      <ul class="fallback">
-        <li><a href="https://ionagael.github.io/CNIT133/Homework5_part1.html">Part 1</a></li>
-        <li><a href="https://ionagael.github.io/CNIT133/Homework5_part2.html">Part 2</a></li>
-                  <li><a href="https://ionagael.github.io/CNIT133/Homework5_part3.html">Part 3</a></li>
-      </ul>
-    </li>
-      
-                      <li>
-      <a href="https://ionagael.github.io/CNIT133/Homework6.html">Homework 6</a>
-      <ul class="fallback">
-        <li><a href="https://ionagael.github.io/CNIT133/Homework6_part1.html">Part 1</a></li>
-        <li><a href="https://ionagael.github.io/CNIT133/Homework6_part2.html">Part 2</a></li>
-                  <li><a href="https://ionagael.github.io/CNIT133/Homework6_part3.html">Part 3</a></li>
-      </ul>
-    </li>
-      
-                            <li>
-      <a href="https://ionagael.github.io/CNIT133/Homework7.html">Homework 7</a>
-      <ul class="fallback">
-        <li><a href="https://ionagael.github.io/CNIT133/Homework7_part1.html">Part 1</a></li>
-        <li><a href="https://ionagael.github.io/CNIT133/Homework7_part2.html">Part 2</a></li>
 
+#chart text{
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end; 
+}
+
+.axis text{
+  font: 10px sans-serif;
+}
+
+.axis path, .axis line{
+  fill: none;
+  stroke : #fff;
+  shape-rendering: crispEdges;
+}
+
+body{
+  background: #1a1a1a;
+  color : #eaeaea;
+  padding : 10px;
+}
+</style>
+</head>
+
+<body class="light-theme">
+                 <ul>
+        <li><a href="https://ionagael.github.io/CNIT133">Home</a></li>
       </ul>
-    </li>
-      
-         <li><a href="https://www.philipburkart.website">Homework 8</a></li> 
-      
-  </ul>
-</nav>
-            <br> <br> <br>       
-              <h2>Homework 2, part 2</h2>
-              <ol>
-                     <li><a href="https://ionagael.github.io/CNIT133/Homework2_part1.html">Homework #2, part 1:</a> Web page displayed in pairs and strong (bold), the letters ab and the numbers 12 and 34 on the same line, with each pair of characters separated by one space.</li>
-                     <li>Homework #2, part 2: Web page containing a script that inputs three integers via form text boxes and displays the sum, average, and product of the three integers, and the smallest and largest of the three integers.</li>
-                     <li><a href="https://ionagael.github.io/CNIT133/Homework2_part3.html">Homework #2, part 3:</a> Web page containing a script that inputs 5 numbers and determines and displays the count of the negative numbers, the number of positive numbers, and the number of zeros.</li>
-              </ol>
-              
+        
+    
+    <header>
+        <h1>D3 Homework</h1>
+    </header>
 
-              <h3>Enter 3 random numbers to see results to math equations below:</h3>
-             
-             <div id="div1">
-              <form name="myform">
-              
-First Number: <input type="text" id="num1" size="10"><br><br>
-Second Number: <input type="text" id="num2" size="10"><br><br>
-Third Number: <input type="text" id="num3" size="10"><br><br>
 
-                     <input type="button" onclick="process()" value="SUBMIT">
-                     <input type="reset" value="RESET">
-                     
-<br><br>             
 
-Sum: <textarea rows="1" cols="40" id="sum"></textarea><br><br>
-Product: <textarea rows="1" cols="40" id="product"></textarea><br><br>
-Average: <textarea rows="1" cols="40" id="average"></textarea><br><br>
-Smallest: <textarea rows="1" cols="40" id="smallest"></textarea><br><br> 
-Largest: <textarea rows="1" cols="40" id="largest"></textarea><br><br> 
-</form>
-</div>
 
-<button>When finished, click here to prevent others from seeing your responses.</button><br><br>
 
+<body>
+<div id="chart"></div> 
 </body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+
 </html>
