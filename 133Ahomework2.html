@@ -31,6 +31,19 @@ body {
   color: #eaeaea;
   padding: 10px;
 }
+
+/* Tooltip styling */
+.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 5px;
+  font-size: 12px;
+  background: #333;
+  color: #fff;
+  border-radius: 3px;
+  pointer-events: none;
+  opacity: 0;
+}
 </style>
 </head>
 
@@ -44,6 +57,9 @@ body {
   </header>
 
   <div id="chart"></div> 
+
+  <!-- Tooltip element -->
+  <div class="tooltip"></div>
 
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script>
@@ -81,14 +97,25 @@ body {
         .range([height, 0]);
 
     // Add the bars
-    svg.selectAll(".bar")
+    var bars = svg.selectAll(".bar")
       .data(data)
       .enter().append("rect")
         .attr("class", "bar")
         .attr("x", function(d) { return x(d.term); })
         .attr("y", function(d) { return y(d.students); })
         .attr("width", x.bandwidth())
-        .attr("height", function(d) { return height - y(d.students); });
+        .attr("height", function(d) { return height - y(d.students); })
+        .on("mouseover", function(event, d) {
+          d3.select(".tooltip")
+            .style("opacity", 1)
+            .html("Term: " + d.term + "<br>Students: " + d.students)
+            .style("left", (event.pageX + 5) + "px")
+            .style("top", (event.pageY - 28) + "px");
+        })
+        .on("mouseout", function() {
+          d3.select(".tooltip")
+            .style("opacity", 0);
+        });
 
     // Add the x-axis
     svg.append("g")
