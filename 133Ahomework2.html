@@ -49,9 +49,19 @@ body {
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script>
     // Fetch the data from the JSON file
-    d3.json("https://github.com/ionagael/CNIT133/blob/main/data.json?raw=true").then(function(data) {
+    d3.json(data.json).then(function(data) {
       console.log(data);  // Debugging line
-      // Set dimensions and margins for the chart
+     
+          data = [
+    {"term": "Spring 16", "students": 160},
+    {"term": "Fall 16", "students": 170},
+    {"term": "Spring 17", "students": 120},
+    {"term": "Fall 17", "students": 185},
+    {"term": "Spring 18", "students": 190},
+    {"term": "Fall 18", "students": 195}
+  ];
+        
+        // Set dimensions and margins for the chart
       var margin = { top: 20, right: 30, bottom: 40, left: 40 },
           width = 960 - margin.left - margin.right,
           height = 500 - margin.top - margin.bottom;
