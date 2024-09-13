@@ -1,42 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <link href="./mystyle.css" rel="stylesheet">
-        <title>Philip Burkart CNIT 133M</title>
-        <meta name="description" content="Home">
-        <meta charset="utf-8">
-       
-        <!-- Site created by Phil Burkart on August 21, 2024 -->
-        
+<head>
+    <link href="./mystyle.css" rel="stylesheet">
+    <title>Philip Burkart CNIT 133M</title>
+    <meta name="description" content="Home">
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Site created by Phil Burkart on August 21, 2024 -->
+
+    <script>
+        $(document).ready(function() {
+            $("#animateButton").click(function() {
+                // Animate font size of heading
+                $("h1").animate({
+                    fontSize: "3em"
+                }, 500).animate({
+                    fontSize: "2em"
+                }, 500);
+
+                // Change font color of heading
+                $("h1").css("color", "blue").delay(500).queue(function(next) {
+                    $(this).css("color", "black");
+                    next();
+                });
+
+                // Add a border around the image
+                $("img").css("border", "5px solid red");
+            });
+        });
+    </script>
 </head>
 
-     
-    
-    <body>
-        <h1>Philip Burkart CNIT 133</h1>
+<body>
+    <h1>Philip Burkart CNIT 133</h1>
 
+    <p>
+        <img src="https://github.com/ionagael/CNIT133/blob/main/images/phil.PNG?raw=true" alt="phil" style="float:right;width:42px;height:42px;">
+        My name is Philip Burkart. I lived in China for 6 years. While in China, I completed a degree in teaching Mandarin. After that, I moved back to America and joined the National Guard. I eventually became a Green Beret, which was my life for 5 years. I currently work in software sales. I own 5 properties, one of which I am converting into a small coffee shop.
+    </p>
 
-<p> <img src="https://github.com/ionagael/CNIT133/blob/main/images/phil.PNG?raw=true" alt="phil" style="float:right;width:42px;height:42px;">My name is Philip Burkart. I lived in China for 6 years. While in China, I completed a degree in teaching Mandarin. After that, I moved back to America and joined the National Guard. I eventually became a Green Beret, which was my life for 5 years. I currently work in software sales. I own 5 properties, one of which I am converting into a small coffeeshop.</p>
-<p>I'm attending this class for a couple reasons. I like to build things, and I think this class will better teach me how to build with HTML, CSS, and Java for phones. Second, I'm trying to create a back-up skill for myself in case I ever want to change careers.</p>
-           <h2>Technologies</h2>     
-        <ul>
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>JavaScript</li>
-</ul>
-    <h2>Resources</h2>   
-                <ul>
-  <li><a href="https://validator.w3.org/nu/" target="_blank">Validator</a>: this is a great reference for checking your work after coding a webpage.</li>
-  <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a>: this is a great reference for learning all the basics of coding.</li>
-</ul>
-    <h2>Homework Assignments</h2>  
-             <ul>
+    <p>I'm attending this class for a couple reasons. I like to build things, and I think this class will better teach me how to build with HTML, CSS, and Java for phones. Second, I'm trying to create a back-up skill for myself in case I ever want to change careers.</p>
+
+    <h2>Technologies</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h2>Resources</h2>
+    <ul>
+        <li><a href="https://validator.w3.org/nu/" target="_blank">Validator</a>: this is a great reference for checking your work after coding a webpage.</li>
+        <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a>: this is a great reference for learning all the basics of coding.</li>
+    </ul>
+
+    <h2>Homework Assignments</h2>
+    <ul>
         <li><a href="https://ionagael.github.io/CNIT133/133Ahomework1.html">133A Homework 1</a></li>
-                        <li><a href="https://ionagael.github.io/CNIT133/133Ahomework2.html">133A Homework 2</a></li>
-      </ul>
-        
-        <footer>
-        </footer>
-    </body>
+        <li><a href="https://ionagael.github.io/CNIT133/133Ahomework2.html">133A Homework 2</a></li>
+    </ul>
+
+    <button id="animateButton">Animate Heading & Image</button>
+
+    <footer>
+    </footer>
+</body>
+
 </html>
