@@ -50,13 +50,28 @@ body {
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script>
     // Fetch the data from the JSON file
-    d3.json("./data.json").then(function(data) {
-      console.log(data);  // Debugging line
+
+            
+d3.json("./data.json", function(error, data) {
+  if (error) {
+    console.error("Error loading JSON:", error);
+    return;
+  }
+  console.log("Data loaded:", data);
+
+
+
+              
       // Set dimensions and margins for the chart
       var margin = { top: 20, right: 30, bottom: 40, left: 40 },
           width = 960 - margin.left - margin.right,
           height = 500 - margin.top - margin.bottom;
 
+
+
+
+
+              
       // Create the SVG container
       var svg = d3.select("#chart").append("svg")
           .attr("width", width + margin.left + margin.right)
