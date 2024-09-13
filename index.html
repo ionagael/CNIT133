@@ -20,11 +20,13 @@
                     fontSize: "2em"
                 }, 500);
 
-                // Change font color of heading
-                $("h1").css("color", "blue").delay(500).queue(function(next) {
-                    $(this).css("color", "black");
-                    next();
-                });
+                // Change font color of heading to blue
+                $("h1").css("color", "blue");
+
+                // Use setTimeout to delay the color change back to black
+                setTimeout(function() {
+                    $("h1").css("color", "black");
+                }, 1000); // Delay of 1 second (1000 ms)
 
                 // Add a border around the image
                 $("img").css("border", "5px solid red");
