@@ -1,4 +1,4 @@
-/* Basic Reset */
+
 body, h1, h2, h3, p, img, ul, li {
     border: 0; 
     margin: 0; 
@@ -12,7 +12,7 @@ body {
     line-height: 1.5;
 }
 
-/* Header Styling */
+
 div#header {
     background-color: #333;
     color: #fff;
@@ -21,7 +21,7 @@ div#header {
     min-height: 130px;
 }
 
-/* Navigation Styling */
+
 ul.navigation {
     list-style: none;
     margin-top: 20px;
@@ -46,7 +46,7 @@ ul.navigation li a:hover {
     background-color: #000;
 }
 
-/* Main Content Flexbox */
+
 div.content {
     display: flex;
     justify-content: space-between;
@@ -66,7 +66,7 @@ div.col-right img {
     margin-right: 10px;
 }
 
-/* Sidebar Styling */
+
 div.sidebar-left {
     padding: 10px;
 }
@@ -90,7 +90,7 @@ div#footer {
     text-align: center;
 }
 
-/* Mobile Styles - Responsive */
+
 @media (max-width: 768px) {
     ul.navigation {
         flex-direction: column;
