@@ -36,83 +36,47 @@ body {
   </style>
 </head>
 
-<body class="light-theme">
-  <ul>
-    <li><a href="https://ionagael.github.io/CNIT133">Home</a></li>
-  </ul>
-  
-  <header>
-    <h2>D3 Homework</h2>
-  </header>
-
-  <div id="chart"></div> 
-
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script>
-    // Fetch the data from the JSON file
-
-            
-d3.json("./data.json", function(error, data) {
-  if (error) {
-    console.error("Error loading JSON:", error);
-    return;
-  }
-  console.log("Data loaded:", data);
-
-
-
-              
-      // Set dimensions and margins for the chart
-      var margin = { top: 20, right: 30, bottom: 40, left: 40 },
-          width = 960 - margin.left - margin.right,
-          height = 500 - margin.top - margin.bottom;
-
-
-
-
-
-              
-      // Create the SVG container
-      var svg = d3.select("#chart").append("svg")
-          .attr("width", width + margin.left + margin.right)
-          .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-      // Set up the scales
-      var x = d3.scaleBand()
-          .domain(data.map(function(d) { return d.term; }))
-          .range([0, width])
-          .padding(0.1);
-
-      var y = d3.scaleLinear()
-          .domain([0, d3.max(data, function(d) { return d.students; })])
-          .nice()
-          .range([height, 0]);
-
-      // Add the bars
-      svg.selectAll(".bar")
-        .data(data)
-        .enter().append("rect")
-          .attr("class", "bar")
-          .attr("x", function(d) { return x(d.term); })
-          .attr("y", function(d) { return y(d.students); })
-          .attr("width", x.bandwidth())
-          .attr("height", function(d) { return height - y(d.students); });
-
-      // Add the x-axis
-      svg.append("g")
-          .attr("class", "axis axis-x")
-          .attr("transform", "translate(0," + height + ")")
-          .call(d3.axisBottom(x));
-
-      // Add the y-axis
-      svg.append("g")
-          .attr("class", "axis axis-y")
-          .call(d3.axisLeft(y));
-    }).catch(function(error) {
-      console.error('Error loading or parsing data:', error);
-    });
-  </script>
+<body>
+    <div id="header">
+        <h1>Welcome to Wildlife for Life</h1>
+        <h2>We fight for life</h2>
+        
+        <ul class="navigation">
+            <li><a href="index.html" title="home">Home</a></li>
+            <li><a href="#" title="contact">Contact Us</a></li>
+        </ul>
+    </div>
+    
+    <div class="content">
+    
+    <div class="col-right">
+        
+        <h1>The Wild Life is great</h1><br />
+        <p>Wild Life includes all non-domesticated plants, animals and other organisms.</p>
+        <p>Wildlife can be found in all ecosystems. Deserts, forests, rain forests, plains, grasslands, and other areas including the most developed urban sites, all have distinct forms of wildlife.</p><br />
+        
+        <h3>Destruction</h3><br />
+        <img src="images/img1.jpg" class="float-left" alt="alternative text.  This text is for screen readers or in the instance an image can't load, a description of what should have been here." /><p>Exploitation of wild populations has been a characteristic of modern man since our exodus from Africa 130,000 – 70,000 years ago. The rate of extinctions of entire species of plants and animals across the planet has been so high in the last few hundred years it is widely believed that we are in the sixth great extinction event on this planet</p><br />
+        
+        <h3 class="clear">Food, pets, and traditional medicines</h3><br />
+        <p>Anthropologists believe that the Stone Age people and hunter-gatherers relied on wildlife, both plants and animals, for their food. In fact, some species may have been hunted to extinction by early human hunters.</p>
+    </div>
+    
+    <div class="sidebar-left">
+    	<h3>Favorite links</h3>
+    	<ul class="list">
+        	<li><a href="http://wildlife-museum.org/" title="Lindsay Wildlife Museum">Lindsay Wildlife Museum</a></li>
+            <li><a href="http://www.worldwildlife.org/home-full.html" title="WWF">WWF</a></li>
+        </ul>
+        
+        <h3>News</h3>
+        <p>Aug/2012 - About forty Blue whales have been sighted swimming in waters 15 miles west of La Jolla.</p>
+        <p>Aug/2012 - Three tigers have been found dead in India in the last week. The carcass of a ten year old tigress was found in Kanha Tiger Reserve, and another female tiger was found in a very poor state of health in the same reserve. Unfortunately vets could not save her.</p>
+    </div>
+    <br class="clear" />  <!-- this code is clearing the floats from the above divs.  See what happens when you take it away to really learn what clear does... -->
+    </div>
+    <div id="footer">
+        <p>We believe that we can all live together in Planet Earth</p>
+    </div>
 </body>
 </html>
