@@ -1,0 +1,120 @@
+New! Keyboard shortcuts … Drive keyboard shortcuts have been updated to give you first-letters navigation
+	body, h1, h2, h3, p, img, ul, li{
+		border:0; margin:0; padding:0;
+	}
+		/*the above is a very basic reset rule.  Every browser has a slightly different default for HTML tags.  By using this simple CSS reset, all the more glaring styles 
+		are reset and can now be set to whatever properties that would suit your website best. */
+	
+	body{
+		background:#eaf8fb;	/* a light blue background color. */
+		font-family:Arial, Helvetica, sans-serif; /* the font family for all text on the web page is now either arial, helvetica or a sans-serif font if those two are not available */
+		font-size:13px; /* all normal text on the web page has a base font size of 14px now */
+	}
+		
+	p{
+		letter-spacing:.04em; /* letter spacing sets the horizontal spacing (kerning) between letters in a block of text. */
+		line-height:21px; /* line height sets the vertical spacing between lines of text. */
+	}
+		
+	div#header{
+		background-color:#333; /* a more specific way to set a background color */
+		background-image:url(images/headerbkgd.png); /* sets a background image in the header and the position it should sit */
+		background-repeat:no-repeat; /* sets a background image to repeat, repeat-x, repeat-y or not at all as written in this rule */
+		background-position:left bottom;/* sets a background image position */
+		color:#fff;	/* sets the the color of all header text to white */
+		-webkit-border-bottom-right-radius: 4px;
+		-webkit-border-bottom-left-radius: 4px;
+		-moz-border-radius-bottomright: 4px;
+		-moz-border-radius-bottomleft: 4px;
+		border-bottom-right-radius: 4px;
+		border-bottom-left-radius: 4px;	/* these 6 lines of border-radius code make rounded corners for the bottom work in firefox, safari, chrome, opera and IE9 */
+		margin:0 auto; /* by declaring a width on any block element (like a div), giving it a css property of margin:0 auto will center that block element on page */
+		min-height:130px;	/* setting a minimum height of an element means that it can grow to be bigger, if there is a lot of content in it. However, if it doesn't have enough content, it will be at the very least (in this example) 130 pixels tall */
+		padding:45px 15px 15px;	/* by setting a padding, the content within a HTML element will not touch the edges of that element (by adding padding to an element, it actually makes that element appear wider and/or taller.  In this case, the header div is now 15px wider and taller on each side. */
+		width:870px;	/* sets the width of the div to 900px. Remember that if you add padding to this element it will increase the size by the number of pixels in the padding. In this example the width is 900px and we have 15px to the left and right so the total width of the header will be (870px + 15px+15px=930px */
+		
+				}
+		
+	ul.navigation {
+		list-style:none;	/* this removes the bullets from list elements */
+		margin-top:20px;	/* giving the ul a top margin of 20px */
+	}
+					
+	ul.navigation li{
+		display:inline-block; /* an inline block element can have width and height applied to it / and if not, they only take up as much space as the content within allows */
+		margin:0 3px 5px;	/* this code adds a 3px margin to the left and right of the list elements, and 5px to the bottom of the list elements */
+					}
+					
+	ul.navigation li a{
+		background:#4a4a4a;	/* this is a dark grey background for the link */
+		color:#fff;	/* this makes the link text white */
+		-moz-border-radius:2px; 
+		webkit-border-radius:2px; 
+		border-radius:2px;	/* these 3 lines of border-radius code make rounded corners work in firefox, safari, chrome, opera and IE9 */
+		border:1px solid #595959; /* this adds a light grey solid border of 1px width around the link */
+		padding:3px 10px;	/* as the name implies, this adds extra padding around the link, so that the borders don't bump up against the link text */
+		text-decoration:none; /* this removes the normal underline that links usually have */
+	}
+						
+	ul.navigation li a:hover{
+		background-color:#000; /*this is a hover pseudo class.  By designating a different background color, than the class for the a tag above, when a mouse hovers over these particular links, in the navigation bar, the background color will change to what's defined here */
+		
+	}
+	
+	div.content{
+		margin:15px auto; /* this adds a margin of 15px to the top and bottom of the div with the class of content.  The auto margin applies to the left and right side of the div which is what centers the div in the middle of the page. */
+		width:900px;
+	}
+				
+	div.col-right{
+		float:right;
+		width:660px
+		}
+		
+	div.sidebar-left{
+		float:left;
+		padding:0 10px;
+		width:200px;	/* when floating content next to each other, applying set widths will make the content play nice with each other. Change the width of the siebar, or take away the width of the above "div.col-right" and see what happens to get a better idea of how widths effect floats */
+		}
+		
+	div.sidebar-left a{
+		color:#445e64;	/* this redefines all links in the left sidebar to this new color, as opposed to the default blue link color */
+	}
+	
+	div.sidebar-left a:hover{
+		text-decoration:none
+	}	/* when hovering over a link, in the sidebar, this turns off the underline */
+	
+	.list{
+		border-bottom:1px solid #c3dce1; /* adds a border to the bottom of the list to further divide the content for eaier segragation */
+		padding:0 0 20px 15px;	/* adds spacing to the bottom of the list to further divide the content for eaier segragation */
+	}
+	.list li{
+		margin-bottom:10px
+	}
+	.list li a{
+		font-weight:bold;	/* this makes all anchor classes with .list bold without using <strong>  */
+		text-transform:uppercase;	/* this makes all anchor classes with .list uppercase  */
+		font-size:11px;	/* this makes all anchor classes with .list applied 11px tall  */
+	}
+				
+	div#footer{
+		background-color:#c4d5d9;
+		margin:0 auto;
+		padding:15px;
+		text-align:center;
+		width:900px;
+	}
+	.float-left{
+		float:left;	/* use this on an element (like an image) to make it float to the left of it's containing HTML element */
+		margin:0  10px 10px 0;
+	}
+	.float-right{
+		float:right;	/* use this on an element (like an image) to make it float to the right of it's containing HTML element */
+	}
+	.float-right img{
+		margin:0 0 10px 10px;	/* use this on an element (like an image) to make it float to the right of it's containing HTML element */
+	}
+	.clear{
+		clear:both; /* this clears floats.  This would be used to cancel out a float's behavior on content below it.  */
+	}	
