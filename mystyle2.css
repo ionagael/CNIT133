@@ -5,11 +5,21 @@ body, h1, h2, h3, p, img, ul, li {
     padding: 0;
 }
 
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
 body {
+    margin: 0; /* Remove default body margin */
+    padding: 0;
     background: #eaf8fb;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+    font-size: 13px;
     line-height: 1.5;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 
