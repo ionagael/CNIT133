@@ -5,7 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Location - ABC Toys</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <script src="js/location.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+
+      function successCallback(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+
+        document.getElementById("latitude").textContent = latitude;
+        document.getElementById("longitude").textContent = longitude;
+      }
+
+      function errorCallback(error) {
+        alert("Error occurred: " + error.message);
+      }
+    });
+  </script>
 </head>
 <body>
 
