@@ -27,15 +27,16 @@
   <div class="container mt-5 pt-5">
     <h2>Our Products</h2>
     <div class="accordion" id="productAccordion">
+      <!-- Toy 1 -->
       <div class="card">
         <div class="card-header" id="headingOne">
           <h5 class="mb-0">
-            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               Toy 1
             </button>
           </h5>
         </div>
-        <div id="collapseOne" class="collapse" data-parent="#productAccordion">
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#productAccordion">
           <div class="card-body">
             <img src="https://github.com/ionagael/CNIT133/blob/main/images/bulldozer.jfif?raw=true" class="img-fluid" alt="Toy 1">
             <p>Bulldozers, every child's favorite!</p>
@@ -43,15 +44,16 @@
         </div>
       </div>
 
-            <div class="card">
-        <div class="card-header" id="headingOne">
+      <!-- Toy 2 -->
+      <div class="card">
+        <div class="card-header" id="headingTwo">
           <h5 class="mb-0">
-            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               Toy 2
             </button>
           </h5>
         </div>
-        <div id="collapseOne" class="collapse" data-parent="#productAccordion">
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#productAccordion">
           <div class="card-body">
             <img src="https://github.com/ionagael/CNIT133/blob/main/images/cookie.png?raw=true" class="img-fluid" alt="Toy 2">
             <p>Plush cookies!</p>
@@ -59,25 +61,28 @@
         </div>
       </div>
 
-                  <div class="card">
-        <div class="card-header" id="headingOne">
+      <!-- Toy 3 -->
+      <div class="card">
+        <div class="card-header" id="headingThree">
           <h5 class="mb-0">
-            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
               Toy 3
             </button>
           </h5>
         </div>
-        <div id="collapseOne" class="collapse" data-parent="#productAccordion">
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#productAccordion">
           <div class="card-body">
             <img src="https://github.com/ionagael/CNIT133/blob/main/images/sun.jpeg?raw=true" class="img-fluid" alt="Toy 3">
             <p>Sun playing cards!</p>
           </div>
         </div>
       </div>
-      
 
     </div>
   </div>
 
+  <!-- Bootstrap and jQuery Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
