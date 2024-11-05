@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products - ABC Toys</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar (reuse from above) -->
+  <!-- Same navbar code as index.html -->
+
+  <div class="container mt-5 pt-5">
+    <h2>Our Products</h2>
+    <div class="accordion" id="productAccordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
+              Toy 1
+            </button>
+          </h5>
+        </div>
+        <div id="collapseOne" class="collapse" data-parent="#productAccordion">
+          <div class="card-body">
+            <img src="images/toy1.jpg" class="img-fluid" alt="Toy 1">
+            <p>Description of Toy 1.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more toys in similar structure -->
+
+    </div>
+  </div>
+
+</body>
+</html>
